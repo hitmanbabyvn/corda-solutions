@@ -1,0 +1,845 @@
+<!-- If you edit this, then please make the same changes to layout_for_doc_website.html, as that is used for the web
+     doc site generation which we put analytics tracking on to identify any potential problem pages  -->
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Installation and Configuration &mdash; Corda Solutions Site October 2018 documentation</title><link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Node Registration" href="node-registration.html" />
+    <link rel="prev" title="Prerequisites and Sizing" href="prerequisites-sizing.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+            <a href="../../index.html" class="icon icon-home"> Corda Solutions Site
+          </a>
+              <div class="version">
+                October 2018
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Business Networks</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../business-networks/intro.html">Corda Business Networks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../business-networks/what-is-a-business-network.html">What is a Business Network?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../business-networks/how-do-business-networks-start.html">How Do Business Networks Start?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../business-networks/how-do-business-networks-start.html#top-down-business-led">Top-Down (Business-Led)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../business-networks/how-do-business-networks-start.html#bottom-up-technology-led">Bottom-Up (Technology-Led)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../business-networks/how-do-business-networks-start.html#adoptive">Adoptive</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../business-networks/roles-and-responsibilities.html">Roles and Responsibilities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../business-networks/roles-and-responsibilities.html#business-network-governor-bng">Business Network Governor (BNG)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../business-networks/roles-and-responsibilities.html#business-network-operator-bno">Business Network Operator (BNO)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../business-networks/roles-and-responsibilities.html#business-network-user-bnu">Business Network User (BNU)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../business-networks/business-network-operator-node.html">Business Network Operator Node</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../business-networks/business-network-operator-node.html#business-network-operator-services">Business Network Operator Services</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-operator-node.html#membership-management">Membership Management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-operator-node.html#master-data-management">Master Data Management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-operator-node.html#authorisation">Authorisation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-operator-node.html#monitoring-reporting">Monitoring &amp; Reporting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-operator-node.html#announcements-signaling">Announcements &amp; Signaling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-operator-node.html#software-distribution">Software Distribution</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../business-networks/interoperability.html">Interoperability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../business-networks/business-network-playbook/intro.html">Business Network Playbook</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../business-networks/business-network-playbook/structure.html">S. Structure</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/structure.html#s-1-define-business-network-mission">S.1. Define Business Network Mission</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/structure.html#s-2-assign-business-network-roles">S.2. Assign Business Network Roles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/structure.html#s-3-define-the-governance-body-model">S.3. Define the Governance Body Model</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../business-networks/business-network-playbook/governance.html">G. Governance</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/governance.html#g-1-describe-participants">G.1. Describe Participants</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/governance.html#g-2-define-the-asset-model">G.2. Define the Asset Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/governance.html#g-2-define-the-business-process">G.2. Define the Business Process</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/governance.html#g-4-outline-legal-and-regulatory-needs">G.4. Outline Legal and Regulatory Needs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/governance.html#g-5-establish-the-network-financial-model">G.5. Establish the Network Financial Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/governance.html#g-6-establish-data-privacy-policies">G.6. Establish Data Privacy Policies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/governance.html#g-7-establish-data-retention-policies">G.7. Establish Data Retention policies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/governance.html#g-8-establish-data-resiliency-and-system-availability-policies">G.8. Establish Data Resiliency and System Availability Policies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/governance.html#g-9-assert-data-and-or-processing-standards">G.9. Assert Data and/or Processing Standards</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/governance.html#g-10-establish-transaction-validation-policies">G.10. Establish Transaction Validation Policies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/governance.html#g-11-establish-dispute-management-policies">G.11. Establish Dispute Management Policies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/governance.html#g-12-establish-on-boarding-policies">G.12. Establish On-boarding Policies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/governance.html#g-13-establish-off-boarding-policies">G.13. Establish Off-boarding Policies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/governance.html#g-14-establish-inter-network-policies">G.14. Establish Inter-Network Policies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/governance.html#g-15-define-performance-slas">G.15. Define Performance SLAs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/governance.html#g-16-establish-change-management-policies">G.16. Establish Change Management Policies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/governance.html#g-16-1-business-network-role-changes">G.16.1. Business Network Role Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/governance.html#g-16-2-business-network-legal-agreement-changes">G.16.2. Business Network Legal Agreement Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/governance.html#g-16-3-corda-platform-change-management-rules">G.16.3. Corda Platform Change Management Rules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/governance.html#g-16-4-cordapp-change-management-rules">G.16.4. CorDapp Change Management Rules</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../business-networks/business-network-playbook/operations.html">O. Operations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/operations.html#o-1-devise-node-configuration">O.1. Devise Node Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/operations.html#o-2-notary-configuration">O.2. Notary Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/operations.html#o-3-oracle-configuration">O.3. Oracle Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/operations.html#o-4-create-change-management-procedures">O.4. Create change management procedures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/operations.html#o-5-establish-operational-times">O.5. Establish Operational Times</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/operations.html#o-6-establish-monitoring-metrics">O.6. Establish monitoring metrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/operations.html#o-7-define-audit-report-and-documentation-requirements">O.7. Define audit, report and documentation requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/operations.html#o-8-define-the-network-support-parameters">O.8. Define the network support parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/operations.html#o-9-define-data-retention-and-pruning-procedures">O.9. Define Data Retention and Pruning Procedures</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Software Designs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../designs/business-networks-membership-service.html">Business Network Membership Service</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../designs/business-networks-membership-service.html#glossary">Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../designs/business-networks-membership-service.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../designs/business-networks-membership-service.html#background">Background</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../designs/business-networks-membership-service.html#scope">Scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../designs/business-networks-membership-service.html#timeline">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../designs/business-networks-membership-service.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../designs/business-networks-membership-service.html#assumptions">Assumptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../designs/business-networks-membership-service.html#target-solution">Target solution</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../designs/business-networks-membership-service.html#on-boarding">On-boarding</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../designs/business-networks-membership-service.html#request">Request</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../designs/business-networks-membership-service.html#activation">Activation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../designs/business-networks-membership-service.html#revocation">Revocation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../designs/business-networks-membership-service.html#metadata-updates">Metadata updates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../designs/business-networks-membership-service.html#membership-list-snapshot">Membership list snapshot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../designs/business-networks-membership-service.html#membership-list-distribution">Membership list distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../designs/business-networks-membership-service.html#membership-verification">Membership verification</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../designs/business-networks-membership-service.html#api-extension-points">API extension points</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../designs/ledger-synchronisation-service.html">Ledger Synchronisation Service</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../designs/ledger-synchronisation-service.html#glossary">Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../designs/ledger-synchronisation-service.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../designs/ledger-synchronisation-service.html#background">Background</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../designs/ledger-synchronisation-service.html#scope">Scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../designs/ledger-synchronisation-service.html#timeline">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../designs/ledger-synchronisation-service.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../designs/ledger-synchronisation-service.html#assumptions">Assumptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../designs/ledger-synchronisation-service.html#target-solution">Target solution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../designs/ledger-synchronisation-service.html#api-extension-points">API extension points</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">CorDapp Design Language</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../corda-modelling-notation/overview/overview-overview.html">Overview of CDL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../corda-modelling-notation/overview/overview-whycdl.html">Why CorDapp Design Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../corda-modelling-notation/overview/overview-aims.html">Aims of CorDap Design Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../corda-modelling-notation/overview/overview-views.html">CorDapp Design Language Views</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../corda-modelling-notation/overview/overview-privacy.html">Analysing Privacy in CDL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../corda-modelling-notation/overview/overview-complexity.html">Managing Complexity with CDL</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../corda-modelling-notation/views/views-overview.html">CDL Views</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../corda-modelling-notation/views/views-common-concepts.html">Common Concepts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../corda-modelling-notation/views/views-common-concepts.html#defining-terms">Defining Terms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../corda-modelling-notation/views/views-common-concepts.html#representing-states">Representing States</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../corda-modelling-notation/views/views-state-machine.html">State Machine (Ledger)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../corda-modelling-notation/views/views-state-machine.html#analogy-to-a-finite-state-machine">Analogy to a Finite State Machine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../corda-modelling-notation/views/views-state-machine.html#basic-model">Basic model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../corda-modelling-notation/views/views-state-machine.html#introducing-constraints">Introducing Constraints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../corda-modelling-notation/views/views-state-machine.html#transitions-constraints">Transitions Constraints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../corda-modelling-notation/views/views-state-machine.html#state-level-constraints">State Level Constraints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../corda-modelling-notation/views/views-state-machine.html#transaction-level-constraints">Transaction Level Constraints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../corda-modelling-notation/views/views-state-machine.html#required-signers-constraints">Required Signers Constraints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../corda-modelling-notation/views/views-state-machine.html#visibility-constraints">Visibility Constraints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../corda-modelling-notation/views/views-state-machine.html#multiplicity-constraints">Multiplicity Constraints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../corda-modelling-notation/views/views-state-machine.html#mapping-to-the-code">Mapping to the code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../corda-modelling-notation/views/views-state-machine.html#putting-it-together">Putting it together</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../corda-modelling-notation/views/views-state-evolution.html">State Evolution (Ledger)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../corda-modelling-notation/views/views-state-evolution.html#basic-state-evolution-diagram">Basic State Evolution Diagram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../corda-modelling-notation/views/views-state-evolution.html#reference-state">Reference State</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../corda-modelling-notation/views/views-state-evolution.html#explicit-transactions">Explicit Transactions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../corda-modelling-notation/views/views-state-evolution.html#branching-transitions">Branching Transitions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../corda-modelling-notation/views/views-state-instance.html">States Instance (Ledger)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../corda-modelling-notation/views/views-bpmn.html">BPMN (Orchestration)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../corda-modelling-notation/views/views-transaction-instance.html">Transaction Instance (Orchestration)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../corda-modelling-notation/views/views-flow-sequence.html">Flow Sequence (Orchestration)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../corda-modelling-notation/high-level-architecture/arch-overview.html">High Level Architecture Views</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../corda-modelling-notation/high-level-architecture/arch-high_level_process.html">High Level Process Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../corda-modelling-notation/high-level-architecture/arch-corda-network.html">High Level Corda Network</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../corda-modelling-notation/privacy/privacy-overview.html">Analysing Privacy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../corda-modelling-notation/privacy/privacy-why-model.html">Why Model Privacy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../corda-modelling-notation/privacy/privacy-analysing.html">Analysing Privacy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../corda-modelling-notation/privacy/privacy-expressing-requirements.html">Expressing Privacy Requirements</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../corda-modelling-notation/complexity/complexity-overview.html">Managing Complexity</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../corda-modelling-notation/complexity/complexity-flow-coupling.html">Flow Level Coupling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../corda-modelling-notation/complexity/complexity-commands-coupling.html">Coupling Via Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../corda-modelling-notation/complexity/complexity-stateref-coupling.html">Coupling to a State Instance via StateRefs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../corda-modelling-notation/complexity/complexity-linearid-coupling.html">Coupling to a State’s Evolution via Linear Id</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Design Patterns</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../design-patterns/patterns/patterns-overview.html">CorDapp Design Patterns</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../design-patterns/patterns/receipts.html">Receipts Pattern</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../design-patterns/patterns/receipts.html#summary">Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../design-patterns/patterns/receipts.html#context">Context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../design-patterns/patterns/receipts.html#problem">Problem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../design-patterns/patterns/receipts.html#salient-factors">Salient Factors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../design-patterns/patterns/receipts.html#solution-walkthrough">Solution Walkthrough</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../design-patterns/patterns/receipts.html#privacy-analysis">Privacy Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../design-patterns/patterns/receipts.html#extensions">Extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../design-patterns/patterns/receipts.html#things-to-consider-when-using-the-receipts-pattern">Things to Consider when using the Receipts pattern</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../design-patterns/patterns/receipts.html#related-anti-patterns">Related Anti-patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../design-patterns/patterns/token-receipts.html">Token Receipts Pattern</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../design-patterns/patterns/token-receipts.html#summary">Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../design-patterns/patterns/token-receipts.html#context">Context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../design-patterns/patterns/token-receipts.html#problem">Problem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../design-patterns/patterns/token-receipts.html#salient-factors">Salient Factors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../design-patterns/patterns/token-receipts.html#solution-walkthrough">Solution Walkthrough</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../design-patterns/patterns/token-receipts.html#privacy-analysis">Privacy Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../design-patterns/patterns/token-receipts.html#extensions-to-investigate">Extensions - to investigate</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../design-patterns/antipatterns/antipatterns-overview.html">CorDapp Anti-Patterns</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../design-patterns/antipatterns/dual-roles-for-nodes.html">Dual roles for nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../design-patterns/antipatterns/check-ownership-of-all-input-states.html">Check ownership of all input states</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../design-patterns/antipatterns/unknown-commands.html">Unknown Commands</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Deployment Patterns</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../intro.html">Deployment options</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="intro.html">On-Premises Deployment</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="bank-deploy-overview.html">Considerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bank-deploy-overview.html#stakeholders">Stakeholders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="corda-node-architecture-components.html">Architecture Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="prerequisites-sizing.html">Prerequisites and Sizing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="prerequisites-sizing.html#corda-node-bridge-and-float">Corda Node, Bridge and Float</a></li>
+<li class="toctree-l4"><a class="reference internal" href="prerequisites-sizing.html#vault-database">Vault - Database</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Installation and Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#non-ha-corda-node-bridge-float">Non HA Corda Node, Bridge, Float</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ha-corda-node-bridge-float">HA Corda Node, Bridge, Float</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#java-8-installation-on-vm">Java 8 Installation on VM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#node-installation">Node Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#corda-firewall-pki-implementation">Corda Firewall PKI Implementation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#explanation-of-pki-keys">Explanation of PKI Keys</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#generate-bridge-and-float-keystores">Generate Bridge and Float Keystores</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bridge-installation">Bridge Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#float-installation">Float Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#corda-3-x-vs-corda-4-x-firewall-upgrade">Corda 3.x vs Corda 4.x Firewall Upgrade</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#port-policy-and-network-configuration">Port Policy and Network Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#proxy-configurations">Proxy Configurations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="node-registration.html">Node Registration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="node-registration.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="node-registration.html#registration-actions">Registration Actions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="start-components.html">Start Components</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="start-components.html#starting-float">Starting Float</a></li>
+<li class="toctree-l4"><a class="reference internal" href="start-components.html#starting-corda-node">Starting Corda Node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="start-components.html#starting-bridge">Starting Bridge</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="monitoring.html">Monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="corda-network-access-details.html">Important Corda Network Details</a></li>
+<li class="toctree-l3"><a class="reference internal" href="additional-info.html">Additional information</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="concepts-background-information.html">Why Deploy Corda Firewall?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="flagdays.html">Corda Network Considerations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kill-flow.html">Corda Flow Kill</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kill-flow.html#how-to-kill-a-stuck-flow">How to Kill a stuck flow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kill-flow.html#how-to-create-stuck-flow">How to create stuck flow</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="corda-health-checker.html">Corda Health Checker</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="corda-health-checker.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="corda-health-checker.html#list-of-checks">List of Checks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="corda-health-checker.html#report-format">Report Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="corda-health-checker.html#disabling-the-corda-health-survey-in-production">Disabling the Corda Health Survey in Production</a></li>
+<li class="toctree-l4"><a class="reference internal" href="corda-health-checker.html#running-the-corda-health-survey">Running the Corda Health Survey</a></li>
+<li class="toctree-l4"><a class="reference internal" href="corda-health-checker.html#example-failure-scenario">Example Failure Scenario</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../kubernetes/intro.html">Corda Kubernetes Deployment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../kubernetes/considerations.html">Considerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../kubernetes/architecture-overview.html">Architecture overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../kubernetes/architecture-overview.html#architecture-explanation">Architecture explanation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../kubernetes/architecture-overview.html#demilitarized-zone-dmz">Demilitarized Zone (DMZ)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../kubernetes/architecture-overview.html#corda-firewall-bridge-float">Corda Firewall (Bridge &amp; Float)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../kubernetes/architecture-overview.html#socks-and-http-proxies">SOCKS and HTTP Proxies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../kubernetes/architecture-overview.html#kubernetes-cluster">Kubernetes Cluster</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../kubernetes/architecture-overview.html#connections-communication-protocols">Connections &amp; Communication Protocols</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../kubernetes/architecture-overview.html#connection-sequence">Connection Sequence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../kubernetes/architecture-overview.html#internal-kubernetes-cluster-details">Internal Kubernetes Cluster Details</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../kubernetes/prerequisites.html">Corda Kubernetes Deployment Prerequisites</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../kubernetes/prerequisites.html#setup">Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../kubernetes/prerequisites.html#docker-image-generation">Docker image generation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../kubernetes/prerequisites.html#public-key-infrastructure-pki-generation">Public Key Infrastructure (PKI) generation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../kubernetes/corda-kubernetes-deployment.html">Corda Kubernetes Deployment</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../kubernetes/corda-kubernetes-deployment.html#registration-certificate-generation">Registration / Certificate Generation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../kubernetes/corda-kubernetes-deployment.html#cordapps">CorDapps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../kubernetes/corda-kubernetes-deployment.html#deployment">Deployment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../kubernetes/corda-kubernetes-deployment.html#execution-and-testing">Execution and testing</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">FAQ</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html">Frequently asked questions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../faq.html#what-is-this-site-for">What is this site for?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../faq.html#where-did-all-the-content-come-from">Where did all the content come from?</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Corda Solutions Site</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../intro.html">Deployment options</a></li>
+          <li class="breadcrumb-item"><a href="intro.html">On-Premises Deployment</a></li>
+      <li class="breadcrumb-item active">Installation and Configuration</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/deployment/onprem/node-firewall-deployment.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="installation-and-configuration">
+<h1>Installation and Configuration</h1>
+<p>These instructions will guide the user through the UAT &amp; PROD configuration to deploy the following components. They are intended for firms deploying Corda Enterprise 3.2 and 3.3. There are some differences in Corda 4.0 deployment which introduces the concept of a shared Corda Firewall with multiple nodes behind it.</p>
+<ul class="simple">
+<li>Corda Node</li>
+<li>Corda Vault</li>
+<li>Corda Bridge</li>
+<li>Corda Float</li>
+<li>Load Balancer  (present 1 IP to CorDapp)</li>
+<li>Zookeeper Cluster (manage Corda Firewall Component availability.</li>
+<li>HTTPS Proxy Server (Node Registration, Network Map Download)</li>
+<li>SOCKS5 Proxy Server (AMPQ over TLS Messaging)</li>
+</ul>
+<p>There are alternative approaches to how these components are deployed. For the purposes of this document, the following diagram represents the topology used.</p>
+<div class="section" id="non-ha-corda-node-bridge-float">
+<h2>Non HA Corda Node, Bridge, Float</h2>
+<a class="reference internal image-reference" href="../../_images/nonha.png"><img alt="../../_images/nonha.png" class="align-center" src="../../_images/nonha.png" style="width: 792.0px; height: 400.8px;" /></a>
+</div>
+<div class="section" id="ha-corda-node-bridge-float">
+<h2>HA Corda Node, Bridge, Float</h2>
+<ol class="arabic simple">
+<li>Corda Nodes run in a Hot/Cold Setup.</li>
+<li>The Corda node communicates with the Doorman (authentication) and Network Map (peer addresses) over HTTPS typically thru an HTTP Proxy Server.</li>
+<li>The Corda node communicates with peers on the Corda network communicating with Corda Firewall which has 2 parts, Bridge &amp; Float.</li>
+<li>The Float’s job is to act as an inbound socket listener, capture messages from peers and send them to the Bridge. The Float prevents the Node and Artemis server from being exposed to Peer Nodes.</li>
+<li>The Bridge captures the inbound messages and sends them to the shared Artemis queue.  The Bridge is typically configured to route thru a SOCKS5 Proxy Server and also manages outgoing messages from the Node to Peers on the Network.</li>
+<li>In the HA configuration Node A and Node B use a shared Artemis queue configured on an NFS mountpoint shared between VM A and VM B.</li>
+<li>R3 have tested Zookeeper to provide an election mechanism to determine which Bridge is up and chooses a Bridge to send messages to the shared Artemis queue.</li>
+<li>The Bridge can select an Active and Alternative Artemis queue for incoming messages and an Active and Alternative Float for outgoing messages based on a configuration file setting.</li>
+<li>R3 customers have tested F5 Load Balancer presenting 1 Float IP to the external world for incoming Peer to Peer Traffic.</li>
+<li>R3 customers have also deployed Azure/F5 Load Balancers presenting 1 Node IP for RPC client connections.</li>
+<li>Customers could use a solution like VCS cluster for Node A to Node B failover, though this configuration has not been tested by R3.</li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/ha.png"><img alt="../../_images/ha.png" class="align-center" src="../../_images/ha.png" style="width: 733.2px; height: 426.0px;" /></a>
+</div>
+<div class="section" id="java-8-installation-on-vm">
+<h2>Java 8 Installation on VM</h2>
+<p>Java 8 should be installed on your Virtual Machine. Here is an example of how this would be done in Azure/AWS on Ubuntu.</p>
+<div class="highlight-kotlin notranslate"><div class="highlight"><pre><span></span><span class="p">&gt;</span> <span class="n">sudo</span> <span class="n">add</span><span class="p">-</span><span class="n">apt</span><span class="p">-</span><span class="n">repository</span> <span class="n">ppa</span><span class="p">:</span><span class="n">webupd8team</span><span class="p">/</span><span class="n">java</span>
+<span class="p">&gt;</span> <span class="n">sudo</span> <span class="n">apt</span> <span class="n">update</span>
+<span class="p">&gt;</span> <span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">oracle</span><span class="p">-</span><span class="n">java8</span><span class="p">-</span><span class="n">installer</span>
+</pre></div>
+</div>
+<p>These are the configuration files that will be created during the process:</p>
+<a class="reference internal image-reference" href="../../_images/config.png"><img alt="../../_images/config.png" class="align-center" src="../../_images/config.png" style="width: 757.2px; height: 528.0px;" /></a>
+<p>You can find examples of configuration files available here : <a class="reference external" href="https://docs.corda.r3.com/corda-bridge-component.html?highlight=node%20conf">https://docs.corda.r3.com/corda-bridge-component.html?highlight=node%20conf</a></p>
+</div>
+<div class="section" id="node-installation">
+<h2>Node Installation</h2>
+<ol class="arabic simple">
+<li>Upload the corda-3.2.jar to the node root directory.</li>
+<li>In the root of your node directory, create a folder called /certificates.</li>
+<li>R3 Operations team will provide you with a network-root-truststore.jks which will be used for authentication.</li>
+<li>Upload the network-root-truststore.jks file to this directory.</li>
+<li>In the root of your node directory, create a folder called cordapps.  Upload your CorDapps to this folder.</li>
+<li>Check that your node directory is structured as follows:</li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/cordadir.png"><img alt="../../_images/cordadir.png" class="align-center" src="../../_images/cordadir.png" style="width: 427.2px; height: 456.0px;" /></a>
+<p>Once your /opt/corda directory is fully created it will contain the following files &amp; directories</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>additional-node-infos/
+artemis/
+brokers/
+certificates/
+cordapps/
+drivers/
+logs/
+plugins -&gt; drivers/
+corda-3.2.jar
+network-parameters
+node.conf
+nodeInfo-XXXXXXXXX
+</pre></div>
+</div>
+<p>This is a sample node.conf which connects to the Corda UAT Network.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;baseDirectory&quot;</span> <span class="o">:</span> <span class="s2">&quot;.&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;compatibilityZoneURL&quot;</span> <span class="o">:</span> <span class="s2">&quot;https://map.testnet.corda.network&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;emailAddress&quot;</span> <span class="o">:</span> <span class="s2">&quot;xxxxx@email.com&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;jarDirs&quot;</span> <span class="o">:</span> <span class="p">[</span>
+        <span class="s2">&quot;plugins&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cordapps&quot;</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;keyStorePassword&quot;</span> <span class="o">:</span> <span class="s2">&quot;MYPASSWORD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;myLegalName&quot;</span> <span class="o">:</span> <span class="s2">&quot; MYLEGALNAME&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;p2pAddress&quot;</span> <span class="o">:</span> <span class="s2">&quot;0.0.0.0:10002&quot;</span><span class="p">,</span>
+
+    <span class="s2">&quot;networkServices&quot;</span> <span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;doormanURL&quot;</span> <span class="o">:</span> <span class="s2">&quot;https://doorman.uat.corda.network/3FCF6CEB-20BD-4B4F-9C72-1EFE7689D85B&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;networkMapURL&quot;</span> <span class="o">:</span> <span class="s2">&quot;https://netmap.uat.corda.network/3FCF6CEB-20BD-4B4F-9C72-1EFE7689D85B&quot;</span>
+<span class="p">},</span>
+
+<span class="c1">//Azure SQL</span>
+<span class="c1">//Microsoft SQL Server 2017</span>
+
+    <span class="s2">&quot;dataSourceProperties&quot;</span> <span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;dataSource&quot;</span> <span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;url&quot;</span> <span class="o">:</span> <span class="s2">&quot;jdbc:sqlserver://SERVER:1433;database=DATABASENAME;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;user&quot;</span> <span class="o">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;password&quot;</span> <span class="o">:</span> <span class="s2">&quot;password&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;dataSourceClassName&quot;</span> <span class="o">:</span> <span class="s2">&quot;com.microsoft.sqlserver.jdbc.SQLServerDataSource&quot;</span>
+    <span class="p">},</span>
+<span class="c1">// postGres 9.6 RDBMS</span>
+    <span class="s2">&quot;dataSourceProperties&quot;</span> <span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;dataSource&quot;</span> <span class="o">:</span> <span class="p">{</span>
+           <span class="s2">&quot;url&quot;</span> <span class="o">:</span> <span class="s2">&quot;jdbc:postgresql://SERVER:5432/DATABASENAME&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;user&quot;</span> <span class="o">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;password&quot;</span> <span class="o">:</span> <span class="s2">&quot;password&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;dataSourceClassName&quot;</span> <span class="o">:</span> <span class="s2">&quot;org.postgresql.ds.PGSimpleDataSource&quot;</span>
+    <span class="p">},</span>
+<span class="c1">// Oracle 11gR2/12cR2 RDBMS</span>
+    <span class="s2">&quot;dataSourceProperties&quot;</span> <span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;dataSourceClassName&quot;</span> <span class="o">:</span> <span class="s2">&quot;oracle.jdbc.pool.OracleDataSource&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;dataSource&quot;</span> <span class="o">:</span> <span class="p">{</span>
+   <span class="s2">&quot;url&quot;</span> <span class="o">:</span> <span class="s2">&quot;jdbc:oracle:thin:@SERVERNAME:1521/DATABASENAME&quot;</span><span class="p">,</span> 
+   <span class="s2">&quot;user&quot;</span> <span class="o">:</span>  <span class="s2">&quot;user&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;password&quot;</span> <span class="o">:</span> <span class="s2">&quot;password&quot;</span>
+        <span class="p">},</span>
+        <span class="p">},</span>
+    <span class="s2">&quot;database&quot;</span> <span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;runMigration&quot;</span> <span class="o">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;schema&quot;</span> <span class="o">:</span> <span class="s2">&quot;dbo&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;transactionIsolationLevel&quot;</span> <span class="o">:</span> <span class="s2">&quot;READ_COMMITTED&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;rpcSettings&quot;</span> <span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;address&quot;</span> <span class="o">:</span> <span class="s2">&quot;0.0.0.0:10003&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;adminAddress&quot;</span> <span class="o">:</span> <span class="s2">&quot;0.0.0.0:10004&quot;</span>
+    <span class="p">},</span>
+<span class="s2">&quot;rpcUsers&quot;</span> <span class="o">:</span> <span class="p">[</span>
+	    <span class="p">{</span>
+        <span class="s2">&quot;password&quot;</span> <span class="o">:</span> <span class="s2">&quot;test1&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;user&quot;</span> <span class="o">:</span> <span class="s2">&quot;user1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;permissions&quot;</span> <span class="o">:</span> <span class="p">[</span> <span class="s2">&quot;ALL&quot;</span> <span class="p">]</span>
+    <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;trustStorePassword&quot;</span> <span class="o">:</span> <span class="s2">&quot;PASSWORD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sshd&quot;</span> <span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;port&quot;</span> <span class="o">:</span> <span class="s2">&quot;2222&quot;</span>
+
+    <span class="s2">&quot;tlsCertCrlDistPoint&quot;</span> <span class="o">:</span> <span class="s2">&quot;http://crl.uat.corda.network/nodetls.crl&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;tlsCertCrlIssuer&quot;</span> <span class="o">:</span> <span class="s2">&quot;CN=Corda TLS CRL Authority,OU=Corda UAT,O=R3 HoldCo LLC,L=New York,C=US&quot;</span><span class="p">,</span>
+<span class="p">},</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="corda-firewall-pki-implementation">
+<h2>Corda Firewall PKI Implementation</h2>
+<p>In a bank environment there will typically be several layers of security protecting the firms data.</p>
+<a class="reference internal image-reference" href="../../_images/cordarch.png"><img alt="../../_images/cordarch.png" class="align-center" src="../../_images/cordarch.png" style="width: 535.2px; height: 692.4px;" /></a>
+<p><em>Network Authentication</em></p>
+<ul class="simple">
+<li>The Corda Node may be deployed behind the inner DMZ (no access to the Internet)</li>
+<li>The Bridge Server may reside on a VM in front of the inner DMZ  (not addressable from the Internet)</li>
+<li>The Corda Float may reside on a VM in the Outer DMZ (directly addressable from the Internet)</li>
+</ul>
+<p><em>PKI Authentication</em></p>
+<ul class="simple">
+<li>Corda PKI Authentication issued by Corda Network can link the Node and Bridge i.e. the red keys indicated below truststore and sslkeystore</li>
+<li>Local PKI Authentication issued by separate CA will link the Bridge and Float i.e the purple keys indicated below trust and bridge.</li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/firewallpki.png"><img alt="../../_images/firewallpki.png" class="align-center" src="../../_images/firewallpki.png" style="width: 1041.6px; height: 554.4px;" /></a>
+<p>The key thing is to look at this from the perspective of a bank implementing these Corda and Local PKI keys.</p>
+<ul class="simple">
+<li>Corda PKI Authentication will link the Node and Bridge and authenticate to Corda Network in the outside world. In other words, this permits mutual authentication between a Corda Node and its Peer Corda Nodes.</li>
+<li>Local PKI Authentication will link the Bridge and Float and allow a secure tunnel into the Float from the outside world. In other words, this permits mutual authentication between two software components, the Bridge and the Float.</li>
+</ul>
+</div>
+<div class="section" id="explanation-of-pki-keys">
+<h2>Explanation of PKI Keys</h2>
+<p>Node Authentication</p>
+<p><em>truststore.jks</em> - this is the same trust store that the node is bootstrapped with during initial registration. It contains the cordarootca certificate - this is the public, root certificate of the entire network. It needs to be copied to the bridge when it is setup. Note that the truststore is also dynamically copied from the bridge to the float at runtime (and is held in memory only on the float). The truststore is used for authenticating nodes that connect to the bridge (&amp; float).</p>
+<p>Node to Bridge Connection</p>
+<p><em>sslkeystore.jks</em> is issued by the Node and contains just the node’s TLS certificate. It needs to be installed on the node and the bridge. The node-to-bridge connection is mutually authenticated TLS, with sslkeystore used both sides to establish the secure tunnel. (truststore.jks is required on each side to authenticate the connection).</p>
+<p>Bridge to Float Connection</p>
+<p><em>bridge.jks</em> &amp; <em>float.jks</em> contain TLS certificates their associated private keys. By convention they should be referred to as keystores. These TLS certificates are unrelated to any of the certificates issued by the node. In our example documentation the bridge &amp; float keys are issued by a stand-alone root certificate. This root certificate is stored in trust.jks. This is required for the bridge and float to authenticate each other</p>
+</div>
+<div class="section" id="generate-bridge-and-float-keystores">
+<h2>Generate Bridge and Float Keystores</h2>
+<ul class="simple">
+<li>In the root of your Corda node directory cd to /opt/corda/temp</li>
+<li>Create a script called keygen.sh and copy the keytool commands from the code block below.</li>
+<li>In /opt/corda/temp run chmod 755 keygen.sh</li>
+<li>In /opt/corda/temp run keygen.sh</li>
+</ul>
+<p>The following keys will be generated:</p>
+<p>bridge.jks
+bridge.pem
+bridgechain.pem
+float.jks
+float.pem
+floatca.jks
+floatchain.pem
+root.pem
+trust.jks</p>
+<p>The important keys are bridge.jks, float.jks, trust.jks.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+ 
+ 
+keytool -genkeypair -keyalg EC -keysize <span class="m">256</span> -alias floatroot -validity <span class="m">1000</span> -dname <span class="s2">&quot;CN=Float Root,O=Local Only,L=London,C=GB&quot;</span> -ext bc:ca:true,pathlen:1 -keystore floatca.jks -storepass capass -keypass cakeypass
+sleep <span class="m">3</span>
+keytool -genkeypair -keyalg EC -keysize <span class="m">256</span> -alias bridgecert -validity <span class="m">1000</span> -dname <span class="s2">&quot;CN=Bridge Local,O=Local Only,L=London,C=GB&quot;</span> -ext bc:ca:false -keystore bridge.jks -storepass bridgepass -keypass bridgepass
+sleep <span class="m">3</span>
+keytool -genkeypair -keyalg EC -keysize <span class="m">256</span> -alias floatcert -validity <span class="m">1000</span> -dname <span class="s2">&quot;CN=Float Local,O=Local Only,L=London,C=GB&quot;</span> -ext bc:ca:false -keystore float.jks -storepass floatpass -keypass floatpass
+sleep <span class="m">3</span>
+keytool -exportcert -rfc -alias floatroot -keystore floatca.jks -storepass capass -keypass cakeypass &gt; root.pem
+sleep <span class="m">3</span>
+keytool -importcert -noprompt -file root.pem -alias root -keystore trust.jks -storepass trustpass
+sleep <span class="m">3</span>
+keytool -certreq -alias bridgecert -keystore bridge.jks -storepass bridgepass -keypass bridgepass <span class="p">|</span>keytool -gencert -ext ku:c<span class="o">=</span>dig,keyEncipherment -ext: eku:true<span class="o">=</span>serverAuth,clientAuth -rfc -keystore floatca.jks -alias floatroot -storepass capass -keypass cakeypass &gt; bridge.pem
+sleep <span class="m">3</span>
+cat root.pem bridge.pem &gt;&gt; bridgechain.pem
+sleep <span class="m">3</span>
+keytool -importcert -noprompt -file bridgechain.pem -alias bridgecert -keystore bridge.jks -storepass bridgepass -keypass bridgepass
+sleep <span class="m">3</span>
+keytool -certreq -alias floatcert -keystore float.jks -storepass floatpass -keypass floatpass <span class="p">|</span>keytool -gencert -ext ku:c<span class="o">=</span>dig,keyEncipherment -ext: eku:true<span class="o">=</span>serverAuth,clientAuth -rfc -keystore floatca.jks -alias floatroot -storepass capass -keypass cakeypass &gt; float.pem
+sleep <span class="m">3</span>
+cat root.pem float.pem &gt;&gt; floatchain.pem
+sleep <span class="m">3</span>
+keytool -importcert -noprompt -file floatchain.pem -alias floatcert -keystore float.jks -storepass floatpass -keypass floatpass
+</pre></div>
+</div>
+<p>A full guide to the creation and deployment of these keys can be found here : <a class="reference external" href="https://docs.corda.r3.com/bridge-configuration-file.html">https://docs.corda.r3.com/bridge-configuration-file.html</a></p>
+</div>
+<div class="section" id="bridge-installation">
+<h2>Bridge Installation</h2>
+<ol class="arabic simple">
+<li>Upload the {{corda-bridgeserver-3.2.jar}} to the /opt/cordabridge directory.</li>
+<li>In the /opt/cordabridge directory, create a softlink called {{certificates}} linked to /opt/corda/certificates</li>
+<li>In the /opt/cordabridge directory, make a directory called bridgecerts</li>
+<li>In the /opt/cordabridge directory, copy /opt/corda/network-parameters back to  /opt/cordabridge</li>
+<li>In the /opt/cordabridge directory, create a file called bridge.conf</li>
+<li>Copy the files /opt/corda/temp/bridge.jks and  /opt/corda/temp/trust.jks into the /opt/cordabridge/bridgecerts directory</li>
+</ol>
+<p>This is a sample bridge.conf:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">//</span>
+<span class="c1">// R3 Proprietary and Confidential</span>
+<span class="c1">//</span>
+<span class="c1">// Copyright (c) 2018 R3 Limited.  All rights reserved.</span>
+<span class="c1">//</span>
+<span class="c1">// The intellectual and technical concepts contained herein are proprietary to R3 and itssuppliers and are protected by trade secret law.</span>
+<span class="c1">//</span>
+<span class="c1">// Distribution of this file or any portion thereof via any medium without the express permission of R3 is strictly prohibited.</span>
+<span class="nx">bridgeMode</span> <span class="o">=</span> <span class="nx">BridgeInner</span>
+<span class="nx">outboundConfig</span> <span class="o">:</span> <span class="p">{</span>
+    <span class="nx">artemisBrokerAddress</span> <span class="o">=</span> <span class="s2">&quot;hostname-where-corda-node-is-running:11005&quot;</span>
+<span class="c1">//    alternateArtemisBrokerAddresses = [ &quot;backup-hostname-where-corda-node-is-running:11005&quot; ]</span>
+<span class="p">}</span>
+<span class="nx">bridgeInnerConfig</span> <span class="o">:</span> <span class="p">{</span>
+      <span class="nx">floatAddresses</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;hostname-where-float-is-running:12005&quot;</span><span class="p">]</span>
+<span class="c1">//    floatAddresses = [&quot;hostname-where-float-is-running:12005&quot;, &quot;backup-hostname-where-float-is-running:12005&quot;]</span>
+    <span class="nx">expectedCertificateSubject</span> <span class="o">=</span> <span class="s2">&quot;CN=Float Local,O=Local Only,L=London,C=GB&quot;</span>
+    <span class="nx">customSSLConfiguration</span> <span class="o">:</span> <span class="p">{</span>
+           <span class="nx">keyStorePassword</span> <span class="o">=</span> <span class="s2">&quot;bridgepass&quot;</span>
+           <span class="nx">trustStorePassword</span> <span class="o">=</span> <span class="s2">&quot;trustpass&quot;</span>
+           <span class="nx">sslKeystore</span> <span class="o">=</span> <span class="s2">&quot;./bridgecerts/bridge.jks&quot;</span>
+           <span class="nx">trustStoreFile</span> <span class="o">=</span> <span class="s2">&quot;./bridgecerts/trust.jks&quot;</span>
+           <span class="nx">crlCheckSoftFail</span> <span class="o">=</span> <span class="kc">true</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+<span class="nx">networkParametersPath</span> <span class="o">=</span> <span class="nx">network</span><span class="o">-</span><span class="nx">parameters</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="float-installation">
+<h2>Float Installation</h2>
+<ol class="arabic simple">
+<li>Create an /opt/cordafloat directory on your VM</li>
+<li>Upload the {{corda-bridgeserver-3.2.jar}} to the /opt/cordafloat directory.</li>
+<li>In the /opt/cordafloat directory, make a directory called floatcerts.</li>
+<li>In the /opt/cordafloat directory, create a file called float.conf.</li>
+<li>The keys were created in the Node VM so sftp from the Node VM to the Float VM and copy the files NodeVM:/opt/corda/temp/float.jks and  /opt/corda/temp/trust.jks into the FloatVM:/opt/cordafloat/floatcerts directory.</li>
+<li>You now should have the correct non Corda PKI CA authentication in place between Bridge and Float.</li>
+</ol>
+<p>This is a sample float.conf:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">//</span>
+<span class="c1">// R3 Proprietary and Confidential</span>
+<span class="c1">//</span>
+<span class="c1">// Copyright (c) 2018 R3 Limited.  All rights reserved.</span>
+<span class="c1">//</span>
+<span class="c1">// The intellectual and technical concepts contained herein are proprietary to R3 and its suppliers and are protected by trade secret law.</span>
+<span class="c1">//</span>
+<span class="c1">// Distribution of this file or any portion thereof via any medium without the express permission of R3 is strictly prohibited.</span>
+<span class="nx">bridgeMode</span> <span class="o">=</span> <span class="nx">FloatOuter</span>
+<span class="nx">inboundConfig</span> <span class="o">:</span> <span class="p">{</span>
+    <span class="nx">listeningAddress</span> <span class="o">=</span> <span class="s2">&quot;hostname-where-float-is-running:10005&quot;</span>
+<span class="p">}</span>
+<span class="nx">floatOuterConfig</span> <span class="o">:</span> <span class="p">{</span>
+    <span class="nx">floatAddress</span> <span class="o">=</span> <span class="s2">&quot;hostname-where-float-is-running:12005&quot;</span>
+    <span class="nx">expectedCertificateSubject</span> <span class="o">=</span> <span class="s2">&quot;CN=Bridge Local,O=Local Only,L=London,C=GB&quot;</span>
+    <span class="nx">customSSLConfiguration</span> <span class="o">:</span> <span class="p">{</span>
+           <span class="nx">keyStorePassword</span> <span class="o">=</span> <span class="s2">&quot;floatpass&quot;</span>
+           <span class="nx">trustStorePassword</span> <span class="o">=</span> <span class="s2">&quot;trustpass&quot;</span>
+           <span class="nx">sslKeystore</span> <span class="o">=</span> <span class="s2">&quot;./floatcerts/float.jks&quot;</span>
+           <span class="nx">trustStoreFile</span> <span class="o">=</span> <span class="s2">&quot;./floatcerts/trust.jks&quot;</span>
+        <span class="nx">crlCheckSoftFail</span> <span class="o">=</span> <span class="kc">true</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="nx">networkParametersPath</span> <span class="o">=</span> <span class="nx">network</span><span class="o">-</span><span class="nx">parameters</span>
+</pre></div>
+</div>
+<p>A full list of the parameters that can be utilized in these configuration files can be found here : <a class="reference external" href="https://docs.corda.r3.com/releases/master/corda-firewall-configuration-file.html">https://docs.corda.r3.com/releases/master/corda-firewall-configuration-file.html</a></p>
+</div>
+<div class="section" id="corda-3-x-vs-corda-4-x-firewall-upgrade">
+<h2>Corda 3.x vs Corda 4.x Firewall Upgrade</h2>
+<p>In Corda 4.x it is possible to for multiple nodes representing multiple identities to reside behind the same Corda Firewall. Details on setup can be found here : <a class="reference external" href="https://docs.corda.r3.com/releases/master/corda-firewall-upgrade.html">https://docs.corda.r3.com/releases/master/corda-firewall-upgrade.html</a></p>
+</div>
+<div class="section" id="port-policy-and-network-configuration">
+<h2>Port Policy and Network Configuration</h2>
+<p>Connections with the Corda Network Doorman and Network Map services (inbound and outbound traffic) will be over HTTP/HTTPS on ports 80 and 443.</p>
+<p>Connections with peer Corda Nodes (including Notaries) will happen on a peer-to-peer connection using AMQP/TLS typically in a port range of 10000 - 10099, though the ports used by other nodes is determined by the node owner.</p>
+<p>Connections with local applications connecting with the CorDapp via the Corda Node happen over RPC.</p>
+<p>Administrative logins with the Corda Node happen via ssh whose port is configured in the node.conf file, typically port 2222.</p>
+<p>Suggested Work flow for Corda Node &amp; Corda Firewall Installation</p>
+<ol class="arabic simple">
+<li>Run ifconfig on Node VM.</li>
+<li>Run ifconfig on Bridge VM.</li>
+<li>Run ifconfig on Float VM.</li>
+<li>Ask your Infrastructure team to tell you public IP of load balancer/firewall.</li>
+<li>In Node.conf p2pAddress put IP from question 4.</li>
+<li>In Node.conf messagingServerAddress put local IP address of Node from question 1, or 0.0.0.0 for all interfaces.</li>
+<li>In Bridge.conf outboundconfig put IP address of node from question 1.</li>
+<li>In Bridge.conf bridgeInnerConfig put IP address of 3, or ask infrastructure team what address is presented by firewall between Bridge and Float.</li>
+<li>In Float.conf floatOuterConfig put IP address from 3 which will be routed to from node. If machine has one NIC use that address, if it has two then use the card that has permission for access from bridge network.</li>
+<li>In Float.conf inboundConfig use IP address from 3 which faces the internet. If there is only one NIC use that value, if there are two check with Infrastructure which one is accessed from the load balancer.</li>
+<li>In Float.conf floatOuterConfig put IP address from 3 which will be routed to from node. If machine has one NIC use that address, if it has two then use the card that has permission for access from bridge network.</li>
+</ol>
+<p>The following image may be helpful in ensuring alignment between the Node, Bridge and Float configuration files.</p>
+<a class="reference internal image-reference" href="../../_images/CordaFirewallConfigAlign.png"><img alt="../../_images/CordaFirewallConfigAlign.png" class="align-center" src="../../_images/CordaFirewallConfigAlign.png" style="width: 583.0px; height: 500.0px;" /></a>
+<p>* Note: <strong>p2pAddress</strong> reflects the <strong>publicly accessible address</strong>, which may or may not be the Float inboundConfig.listeningAddress. If there is an internet firewall configured in front of the Float then ask the Network Administrator for the public address that routes to the Float’s <strong>listeningAddress</strong>, and use that public address for your <strong>p2pAddress</strong>.</p>
+</div>
+<div class="section" id="proxy-configurations">
+<h2>Proxy Configurations</h2>
+<p>You will likely need to establish proxy servers, one for HTTP connection to the Doorman and Network Map services, and Socks proxy to be used with the Corda Firewall for P2P communication Corda Nodes. Please note the examples below are for demonstration purposes only, it is assumed most financial institutions will already have Enterprise Proxy Server deployments in place and available for use by the Corda Firewall.</p>
+<div class="section" id="using-http-proxy-with-corda">
+<h3>Using HTTP Proxy with Corda</h3>
+<p>Many financial institutions will use an HTTP Proxy Server to monitor connections going out to the Internet.</p>
+<p>Corda facilitates the use of an HTTP Proxy to access the Doorman &amp; Network map via HTTPS “get” requests.</p>
+<p>The following is an example of how to set up a Squid Proxy Server and start the Corda Node to point to it as a “tunnel” to connect to Doorman and Network Map.</p>
+<ol class="arabic simple">
+<li>Prerequisite is a VM 2 CPU Core &amp; 2 GB RAM running Ubuntu 18.x.</li>
+<li>ssh into the VM where you want to install the Proxy Server and run the following:</li>
+</ol>
+<ul class="simple">
+<li>sudo apt update</li>
+<li>sudo apt -y install squid</li>
+</ul>
+<ol class="arabic simple" start="3">
+<li>You should edit /etc/squid/squid.conf and add the following entries</li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>acl SSL_ports port <span class="m">443</span>
+acl Safe_ports port <span class="m">8080</span>
+acl CONNECT method CONNECT
+http_access allow all 
+http_port <span class="m">8080</span>
+refresh_pattern ^ftp:           <span class="m">1440</span>    <span class="m">20</span>%     <span class="m">10080</span>
+refresh_pattern ^gopher:        <span class="m">1440</span>    <span class="m">0</span>%      <span class="m">1440</span>
+refresh_pattern -i <span class="o">(</span>/cgi-bin/<span class="p">|</span><span class="se">\?</span><span class="o">)</span> <span class="m">0</span>     <span class="m">0</span>%      <span class="m">0</span>
+refresh_pattern <span class="o">(</span>Release<span class="p">|</span>Packages<span class="o">(</span>.gz<span class="o">)</span>*<span class="o">)</span>$      <span class="m">0</span>       <span class="m">20</span>%     <span class="m">2880</span>
+refresh_pattern .               <span class="m">0</span>       <span class="m">20</span>%     <span class="m">4320</span>
+debug_options ALL,3
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li>Once Squid is successfully installed run:</li>
+</ol>
+<ul class="simple">
+<li>sudo systemctl start squid</li>
+<li>sudo systemctl enable squid</li>
+<li>sudo systemctl status squid</li>
+</ul>
+<ol class="arabic simple" start="5">
+<li>If Squid starts successfully you will see an output similar to this</li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cordaadmin@corda-firewall-proxies:~$ sudo systemctl status squid
+● squid.service - LSB: Squid HTTP Proxy version <span class="m">3</span>.x
+   Loaded: loaded <span class="o">(</span>/etc/init.d/squid<span class="p">;</span> generated<span class="o">)</span>
+   Active: active <span class="o">(</span>running<span class="o">)</span> since Wed <span class="m">2019</span>-03-13 <span class="m">18</span>:44:10 UTC<span class="p">;</span> 14min ago
+     Docs: man:systemd-sysv-generator<span class="o">(</span><span class="m">8</span><span class="o">)</span>
+  Process: <span class="m">14135</span> <span class="nv">ExecStop</span><span class="o">=</span>/etc/init.d/squid stop <span class="o">(</span><span class="nv">code</span><span class="o">=</span>exited, <span class="nv">status</span><span class="o">=</span><span class="m">0</span>/SUCCESS<span class="o">)</span>
+  Process: <span class="m">14197</span> <span class="nv">ExecStart</span><span class="o">=</span>/etc/init.d/squid start <span class="o">(</span><span class="nv">code</span><span class="o">=</span>exited, <span class="nv">status</span><span class="o">=</span><span class="m">0</span>/SUCCESS<span class="o">)</span>
+    Tasks: <span class="m">4</span> <span class="o">(</span>limit: <span class="m">4915</span><span class="o">)</span>
+   CGroup: /system.slice/squid.service
+           ├─14261 /usr/sbin/squid -YC -f /etc/squid/squid.conf
+           ├─14263 <span class="o">(</span>squid-1<span class="o">)</span> -YC -f /etc/squid/squid.conf
+           ├─14265 <span class="o">(</span>logfile-daemon<span class="o">)</span> /var/log/squid/access.log
+           └─14267 <span class="o">(</span>pinger<span class="o">)</span>
+
+Mar <span class="m">13</span> <span class="m">18</span>:44:10 corda-firewall-proxies systemd<span class="o">[</span><span class="m">1</span><span class="o">]</span>: Starting LSB: Squid HTTP Proxy version <span class="m">3</span>.
+Mar <span class="m">13</span> <span class="m">18</span>:44:10 corda-firewall-proxies squid<span class="o">[</span><span class="m">14197</span><span class="o">]</span>:  * Starting Squid HTTP Proxy squid
+Mar <span class="m">13</span> <span class="m">18</span>:44:10 corda-firewall-proxies squid<span class="o">[</span><span class="m">14261</span><span class="o">]</span>: Squid Parent: will start <span class="m">1</span> kids
+Mar <span class="m">13</span> <span class="m">18</span>:44:10 corda-firewall-proxies squid<span class="o">[</span><span class="m">14197</span><span class="o">]</span>:    ...done.
+Mar <span class="m">13</span> <span class="m">18</span>:44:10 corda-firewall-proxies systemd<span class="o">[</span><span class="m">1</span><span class="o">]</span>: Started LSB: Squid HTTP Proxy version <span class="m">3</span>.x
+Mar <span class="m">13</span> <span class="m">18</span>:44:10 corda-firewall-proxies squid<span class="o">[</span><span class="m">14261</span><span class="o">]</span>: Squid Parent: <span class="o">(</span>squid-1<span class="o">)</span> process <span class="m">14263</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="6">
+<li>At this point you can ssh to the VM where the Corda Node is installed and run the following:</li>
+</ol>
+<ul class="simple">
+<li>java -Dhttps.proxyHost=your-firewall-proxy -Dhttps.proxyPort=8080 -jar corda.jar</li>
+</ul>
+<ol class="arabic simple" start="7">
+<li>If the Corda Node starts up sucessfully you can then check /var/log/squid/access.log and you should see output as follows:</li>
+</ol>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="mf">1552502594.525</span>  <span class="mi">70615</span> <span class="mf">10.1.0.30</span> <span class="nx">TCP_TUNNEL</span><span class="o">/</span><span class="mi">200</span> <span class="mi">30087</span> <span class="nx">CONNECT</span> <span class="nx">netmap</span><span class="p">.</span><span class="nx">uat</span><span class="p">.</span><span class="nx">corda</span><span class="p">.</span><span class="nx">network</span><span class="o">:</span><span class="mi">443</span> <span class="o">-</span> <span class="nx">HIER_DIRECT</span><span class="o">/</span><span class="mf">51.140.164.141</span> <span class="o">-</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="using-socks-proxy-with-corda-bridge">
+<h3>Using Socks Proxy with Corda Bridge</h3>
+<p>R3 strongly recommend the use of an SOCKS Proxy in conjunction with the Corda Firewall to access peers on the network for P2P communication.</p>
+<p>SOCKS is a general purpose proxy server that establishes a TCP connection to another server on behalf of a client, then routes all the traffic back and forth between the client and the server. It works for any kind of network protocol on any port. SOCKS Version 5 adds additional support for security and UDP. By contrast an HTTP Proxy only understands HTTP traffic.</p>
+<p>SOCKS works by establishing a TCP connection with another server on the behalf of your client machine. Through this connection, traffic is routed between the client and the server, essentially anonymizing and encrypting your data and your information along the way.</p>
+<p>SOCKS proxies provide an improvement over HTTP proxy in terms of speed of data delivery &amp; by preventing data packets being mis-routed or mislabeled. This provides an overall improvement in terms of stability and avoiding data transfer errors that could otherwise happen.</p>
+<p>The additional benefit of utilizing a SOCKS server is that it facilitates organizations enforce security policy and allow applications to reach legitimate external hosts through simple, centrally controlled rule-based settings.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span> <span class="nx">socksProxyConfig</span> <span class="p">{</span>
+        <span class="nx">version</span> <span class="o">=</span> <span class="nx">SOCKS5</span>
+        <span class="nx">proxyAddress</span> <span class="o">=</span> <span class="s2">&quot;PROXYSERVER:1080&quot;</span>
+        <span class="nx">userName</span> <span class="o">=</span> <span class="s2">&quot;user&quot;</span>
+        <span class="nx">password</span> <span class="o">=</span> <span class="s2">&quot;password&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="prerequisites-sizing.html" class="btn btn-neutral float-left" title="Prerequisites and Sizing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="node-registration.html" class="btn btn-neutral float-right" title="Node Registration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018, R3 Limited.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,517 @@
+<!-- If you edit this, then please make the same changes to layout_for_doc_website.html, as that is used for the web
+     doc site generation which we put analytics tracking on to identify any potential problem pages  -->
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ledger Synchronisation Service &mdash; Corda Solutions Site October 2018 documentation</title><link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Overview of CDL" href="../corda-modelling-notation/overview/overview-overview.html" />
+    <link rel="prev" title="Business Network Membership Service" href="business-networks-membership-service.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+            <a href="../index.html" class="icon icon-home"> Corda Solutions Site
+          </a>
+              <div class="version">
+                October 2018
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Business Networks</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../business-networks/intro.html">Corda Business Networks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../business-networks/what-is-a-business-network.html">What is a Business Network?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../business-networks/how-do-business-networks-start.html">How Do Business Networks Start?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../business-networks/how-do-business-networks-start.html#top-down-business-led">Top-Down (Business-Led)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../business-networks/how-do-business-networks-start.html#bottom-up-technology-led">Bottom-Up (Technology-Led)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../business-networks/how-do-business-networks-start.html#adoptive">Adoptive</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../business-networks/roles-and-responsibilities.html">Roles and Responsibilities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../business-networks/roles-and-responsibilities.html#business-network-governor-bng">Business Network Governor (BNG)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../business-networks/roles-and-responsibilities.html#business-network-operator-bno">Business Network Operator (BNO)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../business-networks/roles-and-responsibilities.html#business-network-user-bnu">Business Network User (BNU)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../business-networks/business-network-operator-node.html">Business Network Operator Node</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../business-networks/business-network-operator-node.html#business-network-operator-services">Business Network Operator Services</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../business-networks/business-network-operator-node.html#membership-management">Membership Management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../business-networks/business-network-operator-node.html#master-data-management">Master Data Management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../business-networks/business-network-operator-node.html#authorisation">Authorisation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../business-networks/business-network-operator-node.html#monitoring-reporting">Monitoring &amp; Reporting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../business-networks/business-network-operator-node.html#announcements-signaling">Announcements &amp; Signaling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../business-networks/business-network-operator-node.html#software-distribution">Software Distribution</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../business-networks/interoperability.html">Interoperability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../business-networks/business-network-playbook/intro.html">Business Network Playbook</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../business-networks/business-network-playbook/structure.html">S. Structure</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../business-networks/business-network-playbook/structure.html#s-1-define-business-network-mission">S.1. Define Business Network Mission</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../business-networks/business-network-playbook/structure.html#s-2-assign-business-network-roles">S.2. Assign Business Network Roles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../business-networks/business-network-playbook/structure.html#s-3-define-the-governance-body-model">S.3. Define the Governance Body Model</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../business-networks/business-network-playbook/governance.html">G. Governance</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../business-networks/business-network-playbook/governance.html#g-1-describe-participants">G.1. Describe Participants</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../business-networks/business-network-playbook/governance.html#g-2-define-the-asset-model">G.2. Define the Asset Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../business-networks/business-network-playbook/governance.html#g-2-define-the-business-process">G.2. Define the Business Process</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../business-networks/business-network-playbook/governance.html#g-4-outline-legal-and-regulatory-needs">G.4. Outline Legal and Regulatory Needs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../business-networks/business-network-playbook/governance.html#g-5-establish-the-network-financial-model">G.5. Establish the Network Financial Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../business-networks/business-network-playbook/governance.html#g-6-establish-data-privacy-policies">G.6. Establish Data Privacy Policies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../business-networks/business-network-playbook/governance.html#g-7-establish-data-retention-policies">G.7. Establish Data Retention policies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../business-networks/business-network-playbook/governance.html#g-8-establish-data-resiliency-and-system-availability-policies">G.8. Establish Data Resiliency and System Availability Policies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../business-networks/business-network-playbook/governance.html#g-9-assert-data-and-or-processing-standards">G.9. Assert Data and/or Processing Standards</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../business-networks/business-network-playbook/governance.html#g-10-establish-transaction-validation-policies">G.10. Establish Transaction Validation Policies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../business-networks/business-network-playbook/governance.html#g-11-establish-dispute-management-policies">G.11. Establish Dispute Management Policies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../business-networks/business-network-playbook/governance.html#g-12-establish-on-boarding-policies">G.12. Establish On-boarding Policies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../business-networks/business-network-playbook/governance.html#g-13-establish-off-boarding-policies">G.13. Establish Off-boarding Policies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../business-networks/business-network-playbook/governance.html#g-14-establish-inter-network-policies">G.14. Establish Inter-Network Policies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../business-networks/business-network-playbook/governance.html#g-15-define-performance-slas">G.15. Define Performance SLAs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../business-networks/business-network-playbook/governance.html#g-16-establish-change-management-policies">G.16. Establish Change Management Policies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../business-networks/business-network-playbook/governance.html#g-16-1-business-network-role-changes">G.16.1. Business Network Role Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../business-networks/business-network-playbook/governance.html#g-16-2-business-network-legal-agreement-changes">G.16.2. Business Network Legal Agreement Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../business-networks/business-network-playbook/governance.html#g-16-3-corda-platform-change-management-rules">G.16.3. Corda Platform Change Management Rules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../business-networks/business-network-playbook/governance.html#g-16-4-cordapp-change-management-rules">G.16.4. CorDapp Change Management Rules</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../business-networks/business-network-playbook/operations.html">O. Operations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../business-networks/business-network-playbook/operations.html#o-1-devise-node-configuration">O.1. Devise Node Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../business-networks/business-network-playbook/operations.html#o-2-notary-configuration">O.2. Notary Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../business-networks/business-network-playbook/operations.html#o-3-oracle-configuration">O.3. Oracle Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../business-networks/business-network-playbook/operations.html#o-4-create-change-management-procedures">O.4. Create change management procedures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../business-networks/business-network-playbook/operations.html#o-5-establish-operational-times">O.5. Establish Operational Times</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../business-networks/business-network-playbook/operations.html#o-6-establish-monitoring-metrics">O.6. Establish monitoring metrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../business-networks/business-network-playbook/operations.html#o-7-define-audit-report-and-documentation-requirements">O.7. Define audit, report and documentation requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../business-networks/business-network-playbook/operations.html#o-8-define-the-network-support-parameters">O.8. Define the network support parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../business-networks/business-network-playbook/operations.html#o-9-define-data-retention-and-pruning-procedures">O.9. Define Data Retention and Pruning Procedures</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Software Designs</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="business-networks-membership-service.html">Business Network Membership Service</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="business-networks-membership-service.html#glossary">Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="business-networks-membership-service.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="business-networks-membership-service.html#background">Background</a></li>
+<li class="toctree-l2"><a class="reference internal" href="business-networks-membership-service.html#scope">Scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="business-networks-membership-service.html#timeline">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="business-networks-membership-service.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="business-networks-membership-service.html#assumptions">Assumptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="business-networks-membership-service.html#target-solution">Target solution</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="business-networks-membership-service.html#on-boarding">On-boarding</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="business-networks-membership-service.html#request">Request</a></li>
+<li class="toctree-l4"><a class="reference internal" href="business-networks-membership-service.html#activation">Activation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="business-networks-membership-service.html#revocation">Revocation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="business-networks-membership-service.html#metadata-updates">Metadata updates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="business-networks-membership-service.html#membership-list-snapshot">Membership list snapshot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="business-networks-membership-service.html#membership-list-distribution">Membership list distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="business-networks-membership-service.html#membership-verification">Membership verification</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="business-networks-membership-service.html#api-extension-points">API extension points</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Ledger Synchronisation Service</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#glossary">Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#background">Background</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#scope">Scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#timeline">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#assumptions">Assumptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#target-solution">Target solution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#api-extension-points">API extension points</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">CorDapp Design Language</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../corda-modelling-notation/overview/overview-overview.html">Overview of CDL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../corda-modelling-notation/overview/overview-whycdl.html">Why CorDapp Design Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../corda-modelling-notation/overview/overview-aims.html">Aims of CorDap Design Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../corda-modelling-notation/overview/overview-views.html">CorDapp Design Language Views</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../corda-modelling-notation/overview/overview-privacy.html">Analysing Privacy in CDL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../corda-modelling-notation/overview/overview-complexity.html">Managing Complexity with CDL</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../corda-modelling-notation/views/views-overview.html">CDL Views</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../corda-modelling-notation/views/views-common-concepts.html">Common Concepts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../corda-modelling-notation/views/views-common-concepts.html#defining-terms">Defining Terms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../corda-modelling-notation/views/views-common-concepts.html#representing-states">Representing States</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../corda-modelling-notation/views/views-state-machine.html">State Machine (Ledger)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../corda-modelling-notation/views/views-state-machine.html#analogy-to-a-finite-state-machine">Analogy to a Finite State Machine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../corda-modelling-notation/views/views-state-machine.html#basic-model">Basic model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../corda-modelling-notation/views/views-state-machine.html#introducing-constraints">Introducing Constraints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../corda-modelling-notation/views/views-state-machine.html#transitions-constraints">Transitions Constraints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../corda-modelling-notation/views/views-state-machine.html#state-level-constraints">State Level Constraints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../corda-modelling-notation/views/views-state-machine.html#transaction-level-constraints">Transaction Level Constraints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../corda-modelling-notation/views/views-state-machine.html#required-signers-constraints">Required Signers Constraints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../corda-modelling-notation/views/views-state-machine.html#visibility-constraints">Visibility Constraints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../corda-modelling-notation/views/views-state-machine.html#multiplicity-constraints">Multiplicity Constraints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../corda-modelling-notation/views/views-state-machine.html#mapping-to-the-code">Mapping to the code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../corda-modelling-notation/views/views-state-machine.html#putting-it-together">Putting it together</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../corda-modelling-notation/views/views-state-evolution.html">State Evolution (Ledger)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../corda-modelling-notation/views/views-state-evolution.html#basic-state-evolution-diagram">Basic State Evolution Diagram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../corda-modelling-notation/views/views-state-evolution.html#reference-state">Reference State</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../corda-modelling-notation/views/views-state-evolution.html#explicit-transactions">Explicit Transactions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../corda-modelling-notation/views/views-state-evolution.html#branching-transitions">Branching Transitions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../corda-modelling-notation/views/views-state-instance.html">States Instance (Ledger)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../corda-modelling-notation/views/views-bpmn.html">BPMN (Orchestration)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../corda-modelling-notation/views/views-transaction-instance.html">Transaction Instance (Orchestration)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../corda-modelling-notation/views/views-flow-sequence.html">Flow Sequence (Orchestration)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../corda-modelling-notation/high-level-architecture/arch-overview.html">High Level Architecture Views</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../corda-modelling-notation/high-level-architecture/arch-high_level_process.html">High Level Process Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../corda-modelling-notation/high-level-architecture/arch-corda-network.html">High Level Corda Network</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../corda-modelling-notation/privacy/privacy-overview.html">Analysing Privacy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../corda-modelling-notation/privacy/privacy-why-model.html">Why Model Privacy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../corda-modelling-notation/privacy/privacy-analysing.html">Analysing Privacy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../corda-modelling-notation/privacy/privacy-expressing-requirements.html">Expressing Privacy Requirements</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../corda-modelling-notation/complexity/complexity-overview.html">Managing Complexity</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../corda-modelling-notation/complexity/complexity-flow-coupling.html">Flow Level Coupling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../corda-modelling-notation/complexity/complexity-commands-coupling.html">Coupling Via Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../corda-modelling-notation/complexity/complexity-stateref-coupling.html">Coupling to a State Instance via StateRefs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../corda-modelling-notation/complexity/complexity-linearid-coupling.html">Coupling to a State’s Evolution via Linear Id</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Design Patterns</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../design-patterns/patterns/patterns-overview.html">CorDapp Design Patterns</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../design-patterns/patterns/receipts.html">Receipts Pattern</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../design-patterns/patterns/receipts.html#summary">Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../design-patterns/patterns/receipts.html#context">Context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../design-patterns/patterns/receipts.html#problem">Problem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../design-patterns/patterns/receipts.html#salient-factors">Salient Factors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../design-patterns/patterns/receipts.html#solution-walkthrough">Solution Walkthrough</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../design-patterns/patterns/receipts.html#privacy-analysis">Privacy Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../design-patterns/patterns/receipts.html#extensions">Extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../design-patterns/patterns/receipts.html#things-to-consider-when-using-the-receipts-pattern">Things to Consider when using the Receipts pattern</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../design-patterns/patterns/receipts.html#related-anti-patterns">Related Anti-patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../design-patterns/patterns/token-receipts.html">Token Receipts Pattern</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../design-patterns/patterns/token-receipts.html#summary">Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../design-patterns/patterns/token-receipts.html#context">Context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../design-patterns/patterns/token-receipts.html#problem">Problem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../design-patterns/patterns/token-receipts.html#salient-factors">Salient Factors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../design-patterns/patterns/token-receipts.html#solution-walkthrough">Solution Walkthrough</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../design-patterns/patterns/token-receipts.html#privacy-analysis">Privacy Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../design-patterns/patterns/token-receipts.html#extensions-to-investigate">Extensions - to investigate</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../design-patterns/antipatterns/antipatterns-overview.html">CorDapp Anti-Patterns</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../design-patterns/antipatterns/dual-roles-for-nodes.html">Dual roles for nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../design-patterns/antipatterns/check-ownership-of-all-input-states.html">Check ownership of all input states</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../design-patterns/antipatterns/unknown-commands.html">Unknown Commands</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Deployment Patterns</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../deployment/intro.html">Deployment options</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/onprem/intro.html">On-Premises Deployment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/onprem/bank-deploy-overview.html">Considerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/onprem/bank-deploy-overview.html#stakeholders">Stakeholders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/onprem/corda-node-architecture-components.html">Architecture Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/onprem/prerequisites-sizing.html">Prerequisites and Sizing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/onprem/prerequisites-sizing.html#corda-node-bridge-and-float">Corda Node, Bridge and Float</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/onprem/prerequisites-sizing.html#vault-database">Vault - Database</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/onprem/node-firewall-deployment.html">Installation and Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/onprem/node-firewall-deployment.html#non-ha-corda-node-bridge-float">Non HA Corda Node, Bridge, Float</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/onprem/node-firewall-deployment.html#ha-corda-node-bridge-float">HA Corda Node, Bridge, Float</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/onprem/node-firewall-deployment.html#java-8-installation-on-vm">Java 8 Installation on VM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/onprem/node-firewall-deployment.html#node-installation">Node Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/onprem/node-firewall-deployment.html#corda-firewall-pki-implementation">Corda Firewall PKI Implementation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/onprem/node-firewall-deployment.html#explanation-of-pki-keys">Explanation of PKI Keys</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/onprem/node-firewall-deployment.html#generate-bridge-and-float-keystores">Generate Bridge and Float Keystores</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/onprem/node-firewall-deployment.html#bridge-installation">Bridge Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/onprem/node-firewall-deployment.html#float-installation">Float Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/onprem/node-firewall-deployment.html#corda-3-x-vs-corda-4-x-firewall-upgrade">Corda 3.x vs Corda 4.x Firewall Upgrade</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/onprem/node-firewall-deployment.html#port-policy-and-network-configuration">Port Policy and Network Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/onprem/node-firewall-deployment.html#proxy-configurations">Proxy Configurations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/onprem/node-registration.html">Node Registration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/onprem/node-registration.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/onprem/node-registration.html#registration-actions">Registration Actions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/onprem/start-components.html">Start Components</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/onprem/start-components.html#starting-float">Starting Float</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/onprem/start-components.html#starting-corda-node">Starting Corda Node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/onprem/start-components.html#starting-bridge">Starting Bridge</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/onprem/monitoring.html">Monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/onprem/corda-network-access-details.html">Important Corda Network Details</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/onprem/additional-info.html">Additional information</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/onprem/concepts-background-information.html">Why Deploy Corda Firewall?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/onprem/flagdays.html">Corda Network Considerations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/onprem/kill-flow.html">Corda Flow Kill</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/onprem/kill-flow.html#how-to-kill-a-stuck-flow">How to Kill a stuck flow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/onprem/kill-flow.html#how-to-create-stuck-flow">How to create stuck flow</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/onprem/corda-health-checker.html">Corda Health Checker</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/onprem/corda-health-checker.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/onprem/corda-health-checker.html#list-of-checks">List of Checks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/onprem/corda-health-checker.html#report-format">Report Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/onprem/corda-health-checker.html#disabling-the-corda-health-survey-in-production">Disabling the Corda Health Survey in Production</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/onprem/corda-health-checker.html#running-the-corda-health-survey">Running the Corda Health Survey</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/onprem/corda-health-checker.html#example-failure-scenario">Example Failure Scenario</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/kubernetes/intro.html">Corda Kubernetes Deployment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/kubernetes/considerations.html">Considerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/kubernetes/architecture-overview.html">Architecture overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/kubernetes/architecture-overview.html#architecture-explanation">Architecture explanation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/kubernetes/architecture-overview.html#demilitarized-zone-dmz">Demilitarized Zone (DMZ)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/kubernetes/architecture-overview.html#corda-firewall-bridge-float">Corda Firewall (Bridge &amp; Float)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/kubernetes/architecture-overview.html#socks-and-http-proxies">SOCKS and HTTP Proxies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/kubernetes/architecture-overview.html#kubernetes-cluster">Kubernetes Cluster</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/kubernetes/architecture-overview.html#connections-communication-protocols">Connections &amp; Communication Protocols</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/kubernetes/architecture-overview.html#connection-sequence">Connection Sequence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/kubernetes/architecture-overview.html#internal-kubernetes-cluster-details">Internal Kubernetes Cluster Details</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/kubernetes/prerequisites.html">Corda Kubernetes Deployment Prerequisites</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/kubernetes/prerequisites.html#setup">Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/kubernetes/prerequisites.html#docker-image-generation">Docker image generation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/kubernetes/prerequisites.html#public-key-infrastructure-pki-generation">Public Key Infrastructure (PKI) generation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/kubernetes/corda-kubernetes-deployment.html">Corda Kubernetes Deployment</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/kubernetes/corda-kubernetes-deployment.html#registration-certificate-generation">Registration / Certificate Generation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/kubernetes/corda-kubernetes-deployment.html#cordapps">CorDapps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/kubernetes/corda-kubernetes-deployment.html#deployment">Deployment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../deployment/kubernetes/corda-kubernetes-deployment.html#execution-and-testing">Execution and testing</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">FAQ</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently asked questions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../faq.html#what-is-this-site-for">What is this site for?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq.html#where-did-all-the-content-come-from">Where did all the content come from?</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Corda Solutions Site</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Ledger Synchronisation Service</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/designs/ledger-synchronisation-service.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="ledger-synchronisation-service">
+<h1>Ledger Synchronisation Service</h1>
+<div class="section" id="glossary">
+<h2>Glossary</h2>
+<ul class="simple">
+<li><em>SE</em> - Solutions Engineer</li>
+<li><em>BN</em> - Business Network</li>
+<li><em>BNO</em> - Business Network Operator. A well-known party on the network.</li>
+<li><em>BNMS</em> - Business Network Membership Service</li>
+<li><em>CZ</em> - Compatibility Zone</li>
+</ul>
+</div>
+<div class="section" id="overview">
+<h2>Overview</h2>
+<p>This proposal describes the architecture of a reference implementation for the Ledger Synchronisation Service.</p>
+</div>
+<div class="section" id="background">
+<h2>Background</h2>
+<p>Blockchain platforms allow users to recover their data from other peers in the case of a disaster. By design, Corda doesn’t have a global ledger and hence doesn’t provide a data recovery solution at the platform level. Including data recovery mechanism into the Corda ecosystem, would allow BN members to benefit from blockchain-like data recovery guarantees in the conjunction with Corda privacy out-of-the-box.</p>
+</div>
+<div class="section" id="scope">
+<h2>Scope</h2>
+<p>Design a reference implementation of CorDapp, that would allow BN members to recover their states and transactions from each other.</p>
+<p>In-scope:</p>
+<ul class="simple">
+<li>Recovery of states and transactions by a BN member from other members. This would include states, belonging to the node’s well-known identity as well its confidential identities, which other parties are aware of. Note: this doesn’t include the states, where the party is an <em>observer</em> (not the <em>owner</em>).</li>
+</ul>
+<p>Non-goals:</p>
+<ul class="simple">
+<li>Recovery of confidential keypairs.</li>
+<li>Recovery of self-issued, not transacted or transacted only with yourself <code class="docutils literal notranslate"><span class="pre">OwnableStates</span></code>.</li>
+<li>Recovery of flow checkpoints.</li>
+<li>Recovery of the well-known keypair.</li>
+<li>Recovery of <em>observed</em> states (see <a class="reference external" href="https://docs.corda.net/tutorial-observer-nodes.html">Observer Nodes</a>).</li>
+</ul>
+</div>
+<div class="section" id="timeline">
+<h2>Timeline</h2>
+<ul class="simple">
+<li>Projects, which go live on Corda in 2018 are asking to have a reference implementation available <em>asap</em>.</li>
+<li>This solution will evolve over time. We need to get more feedback about usage patterns which might result in future design changes.</li>
+</ul>
+</div>
+<div class="section" id="requirements">
+<h2>Requirements</h2>
+<ul class="simple">
+<li>A BN member should be able to recover their states and transactions from other peers after a disaster.</li>
+<li>A number of times customers flagged a question whether Corda allows to verify that the network is in sync. I.e. whether each BN member is in consensus with other members about the transactions he has been involved into.</li>
+</ul>
+</div>
+<div class="section" id="assumptions">
+<h2>Assumptions</h2>
+<ul class="simple">
+<li>It’s assumed that the BNO and the BN members have been on-boarded using the standard JIRA-based Doorman identity mechanism</li>
+<li>It’s assumed that the BNO CorDapps will be distributed using the current manual means of distribution (eg. copying relevant jar file to nodes cordapps directory)</li>
+<li>BNO discovery is an “out-of-bounds” mechanism (eg. details of a BNO are explicitly provided to a participant node and must be configured as reachable in their node configuration)</li>
+<li>Synchronisation initiator is a valid member of the BN he is trying to recover the data from.</li>
+<li>BN membership management is done via the <a class="reference external" href="../membership-service/design/design.md">Business Network Membership Service</a>.</li>
+<li>BN members are acting honestly by sharing a <em>common</em> part of the ledgers with their counterparts on request.</li>
+</ul>
+</div>
+<div class="section" id="target-solution">
+<h2>Target solution</h2>
+<p>The proposed solution is - to implement the Ledger Synchronisation Service at the Corda application level, where participants communicate to each other via Corda Flows. This would allow a seamless integration with other BNO applications, such as <a class="reference external" href="../../membership-service/design/design.md">Business Network Membership Service</a>, and would also enable Business Networks to tweak the implementation to fulfil their particular requirements, which are envisaged to vary from a case to case. For example some BNs might require participants to obtain an explicit permission of the BNO <em>(signed ticket)</em> before they can start data recovery. Such logic can be easily implemented on top of the reference implementation.</p>
+<p>As Corda ledger is <em>subjective</em> from each peer’s point of view, it’d be not feasible to recover the whole of the ledger from a single peer, unless this peer is aware of all of the transactions on the BN (which is possible but highly unlikely). The proposed solution is to perform data recovery on <em>p2p basis</em>, where one node - the <em>synchronisation initiator</em>, would be responsible for synchronising a <em>common</em> part of its ledger (<em>states and transactions</em>) with each BN member separately. The <em>synchronisation initiator</em> would be requesting each peer to send him transactions where <em>both of them</em> have participated in.</p>
+<p>The Ledger Synchronisation Service is envisaged to be used:</p>
+<ul class="simple">
+<li>By a BN member to recover their transactions from other members after a disaster. Data recovery is supposed to be triggered by the <em>affected node</em>, as a part of its disaster recovery process. To prevent a node from transacting while the data recovery is in progress, the node can be started with only a Ledger Synchronisation CorDapp installed on it, and then restarted with all CorDapps when the data recovery is finished. Alternatively, database level locks or any other external distributed locking system can be used. The <em>data recovery</em> flow would acquire a lock when the ledger synchronisation is started and would release it when its finished. Other flows should refrain from starting while the lock is acquired. The synchronisation lock can be manually acquired by the system administrator even before the node is started. Such prevention mechanisms might be included into the reference implementation in the future if required.</li>
+<li>By a BN member, as a diagnostics tool, to make sure that he is in consensus with the rest of the Business Network about the transactions he has been <em>involved into</em>. This would be particularly useful when a member would want to verify that their local vault has not been tampered with, or that he has not missed any transactions. This diagnostics can be run by every BN Member on a scheduled basis, for example once per day. BN Members can use <em>API Extension Points</em> to implement their custom actions, such as raising an alert to the monitoring system, if they find some transaction being missing from their vaults.</li>
+</ul>
+<p>Ledger synchronisation is supposed to be performed <em>per Business Network</em>, i.e.&nbsp;if a node participates in multiple Business Networks, then it would have to recover its data from each of the Business Networks separately. These rules can be enforced inside of the Ledger Synchronisation Service implementation. Different Business Network should be providing their own implementations of Ledger Synchronisation Service. A single node would have multiple implementations of the Ledger Synchronisation Service installed if it participates in multiple Business Networks.</p>
+<p>The following actors have been identified:</p>
+<ul class="simple">
+<li><em>BNO</em>.</li>
+<li><em>Synchronisation Initiator</em>. A node, which wants to synchronise its data with other BN members.</li>
+<li><em>BN Members</em>. All other BN members.</li>
+</ul>
+<a class="reference internal image-reference" href="../_images/ledger_sync.png"><img alt="Ledger synchronisation" class="align-center" src="../_images/ledger_sync.png" style="width: 1200.0px; height: 812.0px;" /></a>
+<p>Some considerations:</p>
+<ul class="simple">
+<li>Confidential keypairs would require a separate recovery mechanism.</li>
+<li>It’s impossible to recover self-issued, not transacted or transacted only with yourself <code class="docutils literal notranslate"><span class="pre">OwnableStates</span></code>, as they would exist in the vault of the owner only.</li>
+<li>In a highly unlikely event, if <em>all</em> transaction participants loose some transaction data from their vaults, this transaction would become unrecoverable.</li>
+<li>Transaction will be unrecoverable if it has been performed with the parties which don’t exist anymore.</li>
+<li>Data recovery might potentially take a long time, in the case if the ledger is big or if some of the nodes are unreachable.</li>
+<li>Flow checkpoints can’t be recovered, as they are not shared with the counterparts. In the case of disaster all in-progress flows would be lost. Note: this is not a consensus issue as flows are used to collaboratively create transactions ready for signing. So the loss of a flow can not lead to loss of ledger consensus between parties.</li>
+<li>In the case if the private key of a well-known identity is stolen, the attacker would be able to <em>recover</em> the whole of the ledger from other BN members. This issue can be addressed with:<ul>
+<li>The affected node should make the CZ operator and the BNO aware that its key has been compromised, so they can revoke the compromised identity from transacting on the Compatibility Zone and the Business Network respectively.</li>
+<li>BNO can be issuing <em>signed tickets</em> (an API Extension Point), which would be mandatory on the Business Network to initiate a data recovery. BN’s governance framework, might mandate that as an extra security measure, the affected party <em>must</em> contact the BNO off-line to get the <em>data recovery ticket</em> issued. Then, the Ledger Synchronisation Service would support 2 different modes: the <em>data recovery mode</em>, which would require a signed ticket from the BNO and the <em>diagnostics mode</em> which would just be used to verify the ledger integrity.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="api-extension-points">
+<h2>API extension points</h2>
+<ul class="simple">
+<li>Integration with monitoring systems to report about missing transactions</li>
+<li>Mechanisms, preventing a node from transacting while the synchronisation is in progress</li>
+<li>BNO’s signed permissions (tickets) for data recovery</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="business-networks-membership-service.html" class="btn btn-neutral float-left" title="Business Network Membership Service" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../corda-modelling-notation/overview/overview-overview.html" class="btn btn-neutral float-right" title="Overview of CDL" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018, R3 Limited.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

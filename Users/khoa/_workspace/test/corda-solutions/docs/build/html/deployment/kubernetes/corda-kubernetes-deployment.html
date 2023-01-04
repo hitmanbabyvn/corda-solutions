@@ -1,0 +1,583 @@
+<!-- If you edit this, then please make the same changes to layout_for_doc_website.html, as that is used for the web
+     doc site generation which we put analytics tracking on to identify any potential problem pages  -->
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Corda Kubernetes Deployment &mdash; Corda Solutions Site October 2018 documentation</title><link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Frequently asked questions" href="../../faq.html" />
+    <link rel="prev" title="Corda Kubernetes Deployment Prerequisites" href="prerequisites.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+            <a href="../../index.html" class="icon icon-home"> Corda Solutions Site
+          </a>
+              <div class="version">
+                October 2018
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Business Networks</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../business-networks/intro.html">Corda Business Networks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../business-networks/what-is-a-business-network.html">What is a Business Network?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../business-networks/how-do-business-networks-start.html">How Do Business Networks Start?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../business-networks/how-do-business-networks-start.html#top-down-business-led">Top-Down (Business-Led)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../business-networks/how-do-business-networks-start.html#bottom-up-technology-led">Bottom-Up (Technology-Led)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../business-networks/how-do-business-networks-start.html#adoptive">Adoptive</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../business-networks/roles-and-responsibilities.html">Roles and Responsibilities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../business-networks/roles-and-responsibilities.html#business-network-governor-bng">Business Network Governor (BNG)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../business-networks/roles-and-responsibilities.html#business-network-operator-bno">Business Network Operator (BNO)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../business-networks/roles-and-responsibilities.html#business-network-user-bnu">Business Network User (BNU)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../business-networks/business-network-operator-node.html">Business Network Operator Node</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../business-networks/business-network-operator-node.html#business-network-operator-services">Business Network Operator Services</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-operator-node.html#membership-management">Membership Management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-operator-node.html#master-data-management">Master Data Management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-operator-node.html#authorisation">Authorisation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-operator-node.html#monitoring-reporting">Monitoring &amp; Reporting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-operator-node.html#announcements-signaling">Announcements &amp; Signaling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-operator-node.html#software-distribution">Software Distribution</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../business-networks/interoperability.html">Interoperability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../business-networks/business-network-playbook/intro.html">Business Network Playbook</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../business-networks/business-network-playbook/structure.html">S. Structure</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/structure.html#s-1-define-business-network-mission">S.1. Define Business Network Mission</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/structure.html#s-2-assign-business-network-roles">S.2. Assign Business Network Roles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/structure.html#s-3-define-the-governance-body-model">S.3. Define the Governance Body Model</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../business-networks/business-network-playbook/governance.html">G. Governance</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/governance.html#g-1-describe-participants">G.1. Describe Participants</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/governance.html#g-2-define-the-asset-model">G.2. Define the Asset Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/governance.html#g-2-define-the-business-process">G.2. Define the Business Process</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/governance.html#g-4-outline-legal-and-regulatory-needs">G.4. Outline Legal and Regulatory Needs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/governance.html#g-5-establish-the-network-financial-model">G.5. Establish the Network Financial Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/governance.html#g-6-establish-data-privacy-policies">G.6. Establish Data Privacy Policies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/governance.html#g-7-establish-data-retention-policies">G.7. Establish Data Retention policies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/governance.html#g-8-establish-data-resiliency-and-system-availability-policies">G.8. Establish Data Resiliency and System Availability Policies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/governance.html#g-9-assert-data-and-or-processing-standards">G.9. Assert Data and/or Processing Standards</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/governance.html#g-10-establish-transaction-validation-policies">G.10. Establish Transaction Validation Policies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/governance.html#g-11-establish-dispute-management-policies">G.11. Establish Dispute Management Policies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/governance.html#g-12-establish-on-boarding-policies">G.12. Establish On-boarding Policies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/governance.html#g-13-establish-off-boarding-policies">G.13. Establish Off-boarding Policies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/governance.html#g-14-establish-inter-network-policies">G.14. Establish Inter-Network Policies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/governance.html#g-15-define-performance-slas">G.15. Define Performance SLAs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/governance.html#g-16-establish-change-management-policies">G.16. Establish Change Management Policies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/governance.html#g-16-1-business-network-role-changes">G.16.1. Business Network Role Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/governance.html#g-16-2-business-network-legal-agreement-changes">G.16.2. Business Network Legal Agreement Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/governance.html#g-16-3-corda-platform-change-management-rules">G.16.3. Corda Platform Change Management Rules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/governance.html#g-16-4-cordapp-change-management-rules">G.16.4. CorDapp Change Management Rules</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../business-networks/business-network-playbook/operations.html">O. Operations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/operations.html#o-1-devise-node-configuration">O.1. Devise Node Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/operations.html#o-2-notary-configuration">O.2. Notary Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/operations.html#o-3-oracle-configuration">O.3. Oracle Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/operations.html#o-4-create-change-management-procedures">O.4. Create change management procedures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/operations.html#o-5-establish-operational-times">O.5. Establish Operational Times</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/operations.html#o-6-establish-monitoring-metrics">O.6. Establish monitoring metrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/operations.html#o-7-define-audit-report-and-documentation-requirements">O.7. Define audit, report and documentation requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/operations.html#o-8-define-the-network-support-parameters">O.8. Define the network support parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../business-networks/business-network-playbook/operations.html#o-9-define-data-retention-and-pruning-procedures">O.9. Define Data Retention and Pruning Procedures</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Software Designs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../designs/business-networks-membership-service.html">Business Network Membership Service</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../designs/business-networks-membership-service.html#glossary">Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../designs/business-networks-membership-service.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../designs/business-networks-membership-service.html#background">Background</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../designs/business-networks-membership-service.html#scope">Scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../designs/business-networks-membership-service.html#timeline">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../designs/business-networks-membership-service.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../designs/business-networks-membership-service.html#assumptions">Assumptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../designs/business-networks-membership-service.html#target-solution">Target solution</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../designs/business-networks-membership-service.html#on-boarding">On-boarding</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../designs/business-networks-membership-service.html#request">Request</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../designs/business-networks-membership-service.html#activation">Activation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../designs/business-networks-membership-service.html#revocation">Revocation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../designs/business-networks-membership-service.html#metadata-updates">Metadata updates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../designs/business-networks-membership-service.html#membership-list-snapshot">Membership list snapshot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../designs/business-networks-membership-service.html#membership-list-distribution">Membership list distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../designs/business-networks-membership-service.html#membership-verification">Membership verification</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../designs/business-networks-membership-service.html#api-extension-points">API extension points</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../designs/ledger-synchronisation-service.html">Ledger Synchronisation Service</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../designs/ledger-synchronisation-service.html#glossary">Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../designs/ledger-synchronisation-service.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../designs/ledger-synchronisation-service.html#background">Background</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../designs/ledger-synchronisation-service.html#scope">Scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../designs/ledger-synchronisation-service.html#timeline">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../designs/ledger-synchronisation-service.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../designs/ledger-synchronisation-service.html#assumptions">Assumptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../designs/ledger-synchronisation-service.html#target-solution">Target solution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../designs/ledger-synchronisation-service.html#api-extension-points">API extension points</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">CorDapp Design Language</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../corda-modelling-notation/overview/overview-overview.html">Overview of CDL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../corda-modelling-notation/overview/overview-whycdl.html">Why CorDapp Design Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../corda-modelling-notation/overview/overview-aims.html">Aims of CorDap Design Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../corda-modelling-notation/overview/overview-views.html">CorDapp Design Language Views</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../corda-modelling-notation/overview/overview-privacy.html">Analysing Privacy in CDL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../corda-modelling-notation/overview/overview-complexity.html">Managing Complexity with CDL</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../corda-modelling-notation/views/views-overview.html">CDL Views</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../corda-modelling-notation/views/views-common-concepts.html">Common Concepts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../corda-modelling-notation/views/views-common-concepts.html#defining-terms">Defining Terms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../corda-modelling-notation/views/views-common-concepts.html#representing-states">Representing States</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../corda-modelling-notation/views/views-state-machine.html">State Machine (Ledger)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../corda-modelling-notation/views/views-state-machine.html#analogy-to-a-finite-state-machine">Analogy to a Finite State Machine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../corda-modelling-notation/views/views-state-machine.html#basic-model">Basic model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../corda-modelling-notation/views/views-state-machine.html#introducing-constraints">Introducing Constraints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../corda-modelling-notation/views/views-state-machine.html#transitions-constraints">Transitions Constraints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../corda-modelling-notation/views/views-state-machine.html#state-level-constraints">State Level Constraints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../corda-modelling-notation/views/views-state-machine.html#transaction-level-constraints">Transaction Level Constraints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../corda-modelling-notation/views/views-state-machine.html#required-signers-constraints">Required Signers Constraints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../corda-modelling-notation/views/views-state-machine.html#visibility-constraints">Visibility Constraints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../corda-modelling-notation/views/views-state-machine.html#multiplicity-constraints">Multiplicity Constraints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../corda-modelling-notation/views/views-state-machine.html#mapping-to-the-code">Mapping to the code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../corda-modelling-notation/views/views-state-machine.html#putting-it-together">Putting it together</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../corda-modelling-notation/views/views-state-evolution.html">State Evolution (Ledger)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../corda-modelling-notation/views/views-state-evolution.html#basic-state-evolution-diagram">Basic State Evolution Diagram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../corda-modelling-notation/views/views-state-evolution.html#reference-state">Reference State</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../corda-modelling-notation/views/views-state-evolution.html#explicit-transactions">Explicit Transactions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../corda-modelling-notation/views/views-state-evolution.html#branching-transitions">Branching Transitions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../corda-modelling-notation/views/views-state-instance.html">States Instance (Ledger)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../corda-modelling-notation/views/views-bpmn.html">BPMN (Orchestration)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../corda-modelling-notation/views/views-transaction-instance.html">Transaction Instance (Orchestration)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../corda-modelling-notation/views/views-flow-sequence.html">Flow Sequence (Orchestration)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../corda-modelling-notation/high-level-architecture/arch-overview.html">High Level Architecture Views</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../corda-modelling-notation/high-level-architecture/arch-high_level_process.html">High Level Process Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../corda-modelling-notation/high-level-architecture/arch-corda-network.html">High Level Corda Network</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../corda-modelling-notation/privacy/privacy-overview.html">Analysing Privacy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../corda-modelling-notation/privacy/privacy-why-model.html">Why Model Privacy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../corda-modelling-notation/privacy/privacy-analysing.html">Analysing Privacy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../corda-modelling-notation/privacy/privacy-expressing-requirements.html">Expressing Privacy Requirements</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../corda-modelling-notation/complexity/complexity-overview.html">Managing Complexity</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../corda-modelling-notation/complexity/complexity-flow-coupling.html">Flow Level Coupling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../corda-modelling-notation/complexity/complexity-commands-coupling.html">Coupling Via Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../corda-modelling-notation/complexity/complexity-stateref-coupling.html">Coupling to a State Instance via StateRefs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../corda-modelling-notation/complexity/complexity-linearid-coupling.html">Coupling to a State’s Evolution via Linear Id</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Design Patterns</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../design-patterns/patterns/patterns-overview.html">CorDapp Design Patterns</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../design-patterns/patterns/receipts.html">Receipts Pattern</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../design-patterns/patterns/receipts.html#summary">Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../design-patterns/patterns/receipts.html#context">Context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../design-patterns/patterns/receipts.html#problem">Problem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../design-patterns/patterns/receipts.html#salient-factors">Salient Factors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../design-patterns/patterns/receipts.html#solution-walkthrough">Solution Walkthrough</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../design-patterns/patterns/receipts.html#privacy-analysis">Privacy Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../design-patterns/patterns/receipts.html#extensions">Extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../design-patterns/patterns/receipts.html#things-to-consider-when-using-the-receipts-pattern">Things to Consider when using the Receipts pattern</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../design-patterns/patterns/receipts.html#related-anti-patterns">Related Anti-patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../design-patterns/patterns/token-receipts.html">Token Receipts Pattern</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../design-patterns/patterns/token-receipts.html#summary">Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../design-patterns/patterns/token-receipts.html#context">Context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../design-patterns/patterns/token-receipts.html#problem">Problem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../design-patterns/patterns/token-receipts.html#salient-factors">Salient Factors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../design-patterns/patterns/token-receipts.html#solution-walkthrough">Solution Walkthrough</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../design-patterns/patterns/token-receipts.html#privacy-analysis">Privacy Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../design-patterns/patterns/token-receipts.html#extensions-to-investigate">Extensions - to investigate</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../design-patterns/antipatterns/antipatterns-overview.html">CorDapp Anti-Patterns</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../design-patterns/antipatterns/dual-roles-for-nodes.html">Dual roles for nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../design-patterns/antipatterns/check-ownership-of-all-input-states.html">Check ownership of all input states</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../design-patterns/antipatterns/unknown-commands.html">Unknown Commands</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Deployment Patterns</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../intro.html">Deployment options</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../onprem/intro.html">On-Premises Deployment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../onprem/bank-deploy-overview.html">Considerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../onprem/bank-deploy-overview.html#stakeholders">Stakeholders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../onprem/corda-node-architecture-components.html">Architecture Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../onprem/prerequisites-sizing.html">Prerequisites and Sizing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../onprem/prerequisites-sizing.html#corda-node-bridge-and-float">Corda Node, Bridge and Float</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../onprem/prerequisites-sizing.html#vault-database">Vault - Database</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../onprem/node-firewall-deployment.html">Installation and Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../onprem/node-firewall-deployment.html#non-ha-corda-node-bridge-float">Non HA Corda Node, Bridge, Float</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../onprem/node-firewall-deployment.html#ha-corda-node-bridge-float">HA Corda Node, Bridge, Float</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../onprem/node-firewall-deployment.html#java-8-installation-on-vm">Java 8 Installation on VM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../onprem/node-firewall-deployment.html#node-installation">Node Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../onprem/node-firewall-deployment.html#corda-firewall-pki-implementation">Corda Firewall PKI Implementation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../onprem/node-firewall-deployment.html#explanation-of-pki-keys">Explanation of PKI Keys</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../onprem/node-firewall-deployment.html#generate-bridge-and-float-keystores">Generate Bridge and Float Keystores</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../onprem/node-firewall-deployment.html#bridge-installation">Bridge Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../onprem/node-firewall-deployment.html#float-installation">Float Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../onprem/node-firewall-deployment.html#corda-3-x-vs-corda-4-x-firewall-upgrade">Corda 3.x vs Corda 4.x Firewall Upgrade</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../onprem/node-firewall-deployment.html#port-policy-and-network-configuration">Port Policy and Network Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../onprem/node-firewall-deployment.html#proxy-configurations">Proxy Configurations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../onprem/node-registration.html">Node Registration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../onprem/node-registration.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../onprem/node-registration.html#registration-actions">Registration Actions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../onprem/start-components.html">Start Components</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../onprem/start-components.html#starting-float">Starting Float</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../onprem/start-components.html#starting-corda-node">Starting Corda Node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../onprem/start-components.html#starting-bridge">Starting Bridge</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../onprem/monitoring.html">Monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../onprem/corda-network-access-details.html">Important Corda Network Details</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../onprem/additional-info.html">Additional information</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../onprem/concepts-background-information.html">Why Deploy Corda Firewall?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../onprem/flagdays.html">Corda Network Considerations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../onprem/kill-flow.html">Corda Flow Kill</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../onprem/kill-flow.html#how-to-kill-a-stuck-flow">How to Kill a stuck flow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../onprem/kill-flow.html#how-to-create-stuck-flow">How to create stuck flow</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../onprem/corda-health-checker.html">Corda Health Checker</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../onprem/corda-health-checker.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../onprem/corda-health-checker.html#list-of-checks">List of Checks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../onprem/corda-health-checker.html#report-format">Report Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../onprem/corda-health-checker.html#disabling-the-corda-health-survey-in-production">Disabling the Corda Health Survey in Production</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../onprem/corda-health-checker.html#running-the-corda-health-survey">Running the Corda Health Survey</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../onprem/corda-health-checker.html#example-failure-scenario">Example Failure Scenario</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="intro.html">Corda Kubernetes Deployment</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="considerations.html">Considerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="architecture-overview.html">Architecture overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="architecture-overview.html#architecture-explanation">Architecture explanation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="architecture-overview.html#demilitarized-zone-dmz">Demilitarized Zone (DMZ)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="architecture-overview.html#corda-firewall-bridge-float">Corda Firewall (Bridge &amp; Float)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="architecture-overview.html#socks-and-http-proxies">SOCKS and HTTP Proxies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="architecture-overview.html#kubernetes-cluster">Kubernetes Cluster</a></li>
+<li class="toctree-l4"><a class="reference internal" href="architecture-overview.html#connections-communication-protocols">Connections &amp; Communication Protocols</a></li>
+<li class="toctree-l4"><a class="reference internal" href="architecture-overview.html#connection-sequence">Connection Sequence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="architecture-overview.html#internal-kubernetes-cluster-details">Internal Kubernetes Cluster Details</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="prerequisites.html">Corda Kubernetes Deployment Prerequisites</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="prerequisites.html#setup">Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="prerequisites.html#docker-image-generation">Docker image generation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="prerequisites.html#public-key-infrastructure-pki-generation">Public Key Infrastructure (PKI) generation</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Corda Kubernetes Deployment</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#registration-certificate-generation">Registration / Certificate Generation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cordapps">CorDapps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#deployment">Deployment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#execution-and-testing">Execution and testing</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">FAQ</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html">Frequently asked questions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../faq.html#what-is-this-site-for">What is this site for?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../faq.html#where-did-all-the-content-come-from">Where did all the content come from?</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Corda Solutions Site</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../intro.html">Deployment options</a></li>
+          <li class="breadcrumb-item"><a href="intro.html">Corda Kubernetes Deployment</a></li>
+      <li class="breadcrumb-item active">Corda Kubernetes Deployment</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/deployment/kubernetes/corda-kubernetes-deployment.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="corda-kubernetes-deployment">
+<h1>Corda Kubernetes Deployment</h1>
+<p>Now that we have reviewed the architecture and the prerequisites we can start talking about the actual deployment scripts.</p>
+<p>The scripts are located at: <a class="reference external" href="https://github.com/corda/corda-kubernetes-deployment">Github: Corda Kubernetes Deployment</a></p>
+<p>The scripts come with usage instructions of their own, but it is worth explaining the steps in more details.</p>
+<p>There are a few distinct steps to deploying a Corda Node that are always required.</p>
+<ul class="simple">
+<li>The first step is registration / certificates generation.</li>
+<li>Then moving on to deployment</li>
+<li>And finally starting everything up and testing</li>
+</ul>
+<hr class="docutils" />
+<div class="section" id="registration-certificate-generation">
+<h2>Registration / Certificate Generation</h2>
+<p>As discussed on the <a class="reference external" href="prerequisites.html">Prerequisites</a> page, we need to generate a PKI structure for the Corda Firewall to use.</p>
+<p>The generated certificates from this process should be copied to the following folder: <code class="docutils literal notranslate"><span class="pre">helm/files/certificates/firewall_tunnel</span></code>.</p>
+<p>The required files are: <code class="docutils literal notranslate"><span class="pre">bridge.jks</span></code>, <code class="docutils literal notranslate"><span class="pre">float.jks</span></code> and <code class="docutils literal notranslate"><span class="pre">trust.jks</span></code>.</p>
+<p>Once this has been done we will also need to register the Corda Node itself to generate TLS certificates and signing keys, with the next step.</p>
+<p>For further information on Node registration please see <a class="reference external" href="https://solutions.corda.net/deployment/onprem/node-registration.html">Node registration</a></p>
+<div class="section" id="initial-registration">
+<h3>Initial registration</h3>
+<p>The initial registration of a Corda Node is a one-time step that issues a Certificate Signing Request (CSR) to the Identity Manager on the Corda Network and once approved returns with the capability to generate a full certificate chain which links the Corda Network Root CA to the Subordinate CA which in turn links to the Identity Manager CA and finally to the Node CA.
+This Node CA is then capable of generating the necessary TLS certificate and signing keys for use in transactions on the network.</p>
+<p>This process is generally initiated by executing <code class="docutils literal notranslate"><span class="pre">java</span> <span class="pre">-jar</span> <span class="pre">corda.jar</span> <span class="pre">initial-registration</span></code>.
+The process will always need access to the Corda Network root truststore. This is usually assigned to the above command with additional parameters <code class="docutils literal notranslate"><span class="pre">--network-root-truststore-password</span> <span class="pre">$TRUSTSTORE_PASSWORD</span> <span class="pre">--network-root-truststore</span> <span class="pre">./workspace/networkRootTrustStore.jks</span></code>.
+The <code class="docutils literal notranslate"><span class="pre">networkRootTrustStore.jks</span></code> file should be placed in folder <code class="docutils literal notranslate"><span class="pre">helm/files/network</span></code>.
+Once initiated the Corda Node will start the CSR request and wait indefinitely until the CSR request returns or is cancelled.
+If the CSR returns successfully, next the Node will generate the certificates in the folder <code class="docutils literal notranslate"><span class="pre">certificates</span></code>.
+The generated files from this folder should then be copied to the following folder: <code class="docutils literal notranslate"><span class="pre">helm/files/certificates/node</span></code>.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="cordapps">
+<h2>CorDapps</h2>
+<p>Any CorDapps that you would like to install on the Corda Node during the deployment should be placed in folder: <code class="docutils literal notranslate"><span class="pre">helm/files/cordapps</span></code>.
+All files in this folder can then be automatically found in the Corda Node after executing <code class="docutils literal notranslate"><span class="pre">pre-install.sh</span></code> in folder <code class="docutils literal notranslate"><span class="pre">helm/output/corda/templates</span></code>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="deployment">
+<h2>Deployment</h2>
+<p>At this point the one-time setup should be completed and we can move on to the actual deployment.
+We’ll start with executing Helm to compile the template into a set of output files that we can directly apply into the Kubernetes cluster to create resources.</p>
+<div class="section" id="helm-settings-configuration">
+<h3>Helm settings / configuration</h3>
+<p>Helm works by taking values in a special file called <code class="docutils literal notranslate"><span class="pre">values.yaml</span></code> and applying those values to the files in folders <code class="docutils literal notranslate"><span class="pre">files</span></code> and <code class="docutils literal notranslate"><span class="pre">templates</span></code>.
+The <code class="docutils literal notranslate"><span class="pre">values.yaml</span></code> file is well documented on its own and should be filled in carefully and diligently. Do not make typos here, double-check every value.</p>
+</div>
+<div class="section" id="helm-compile">
+<h3>Helm compile</h3>
+<p>Now we are ready to compile the Helm templates into Kubernetes scripts.
+Executing <code class="docutils literal notranslate"><span class="pre">helm_compile.sh</span></code> will do the following:</p>
+<ul class="simple">
+<li>Goes through the <code class="docutils literal notranslate"><span class="pre">templates</span></code> folder, for each file replaces variables by actual values from <code class="docutils literal notranslate"><span class="pre">values.yaml</span></code> file.</li>
+<li>Places the compiled templates into the <code class="docutils literal notranslate"><span class="pre">output/templates</span></code> folder.</li>
+<li>For the special file <code class="docutils literal notranslate"><span class="pre">ConfigMap.yml</span></code>, combines the files in folder <code class="docutils literal notranslate"><span class="pre">files</span></code> into their raw text/binary representation and embeds them into <code class="docutils literal notranslate"><span class="pre">ConfigMap.yml</span></code>. This file acts as way to inject files into Kubernetes pods.</li>
+<li>Lastly applies the generated Kubernetes files directly into the Kubernetes cluster using <code class="docutils literal notranslate"><span class="pre">kubectl</span> <span class="pre">apply</span> <span class="pre">-f</span></code>.</li>
+</ul>
+</div>
+<div class="section" id="removing-all-installed-resources-from-kubernetes">
+<h3>Removing all installed resources from Kubernetes</h3>
+<p>In the event you want a new fresh deployment of the Kubernetes cluster (especially useful during first few executions while learning the system), run the bash script called <code class="docutils literal notranslate"><span class="pre">delete-all.sh</span></code>.
+This file will delete Kubernetes cluster resources in the following order:</p>
+<ul class="simple">
+<li>PersistentVolumes</li>
+<li>PersistentVolumeClaims</li>
+<li>StatefulSets</li>
+<li>Deployments</li>
+<li>Services</li>
+<li>Pods</li>
+<li>Jobs</li>
+</ul>
+<p>The script will then wait until all the resources have been deleted from the Kubernetes cluster by polling it every 5 seconds. Finally it will remove any PersistentVolumeClaims that have been released in the shutdown phase.
+Once this script has finished executing, it is then safe to execute <code class="docutils literal notranslate"><span class="pre">helm_compile.sh</span></code> (or kubectl apply -f directly) to perform a fresh deployment.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="execution-and-testing">
+<h2>Execution and testing</h2>
+<div class="section" id="execution">
+<h3>Execution</h3>
+<p>Once the <code class="docutils literal notranslate"><span class="pre">helm_compile.sh</span></code> has deployed the resources to the Kubernetes cluster we are already in the startup sequence, where the pods will start and continue to self-organise and connect to the required components.
+We just need to monitor and verify that everything gets initialised correctly. This is especially true if we have made a fresh deploy with values that have yet to be tested. There are many things that can be set incorrectly to provide a deployment that is not working, let’s review some of these cases.</p>
+<p>First thing first, get used to writing <code class="docutils literal notranslate"><span class="pre">kubectl</span> <span class="pre">get</span> <span class="pre">pods</span></code>, this is your number one command for verifying if your components are running correctly.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ kubectl get pods
+NAME                                            READY   STATUS    RESTARTS   AGE
+corda-node-3-bridge-deployment-8d84c764-wx444   <span class="m">1</span>/1     Running   <span class="m">0</span>          28h
+corda-node-3-deployment-5f7cbf95bd-bznpv        <span class="m">1</span>/1     Running   <span class="m">1</span>          28h
+corda-node-3-float-deployment-6c74fd895-ngdvd   <span class="m">1</span>/1     Running   <span class="m">0</span>          28h
+</pre></div>
+</div>
+<p>You should be looking at the <strong>STATUS</strong> column and verifying that it is listed as <strong>Running</strong>. If there are many <strong>RESTARTS</strong> listed for a given pod, it is likely to indicate an issue with the pod.</p>
+<p>Next is to analyse the running pods, to see what the components inside them are doing.</p>
+<p>We do this with the <code class="docutils literal notranslate"><span class="pre">kubectl</span> <span class="pre">logs</span> <span class="pre">-f</span> <span class="pre">&lt;pod&gt;</span></code> command, which directly shows the console log output for the given pod.
+In the case of the Corda Node (using the above example it would look like this: <code class="docutils literal notranslate"><span class="pre">kubectl</span> <span class="pre">logs</span> <span class="pre">-f</span> <span class="pre">corda-node-3-deployment-5f7cbf95bd-bznpv</span></code>).</p>
+<div class="highlight-kotlin notranslate"><div class="highlight"><pre><span></span><span class="n">Node</span> <span class="k">for</span> <span class="s">&quot;PartyE&quot;</span> <span class="n">started</span> <span class="n">up</span> <span class="n">and</span> <span class="n">registered</span> <span class="k">in</span> <span class="m">54.16</span> <span class="n">sec</span>
+</pre></div>
+</div>
+<p>This means that the Corda Node has successfully started and is running. Note, that this is not a guarantee that it can communicate successfully with the Corda Firewall let alone other nodes on the network.
+We should perform the same kubectl logs command on the bridge and float in the above example to verify that they have both started successfully, but also that they have connected successfully to each other.</p>
+<p>Lastly, we may need to go and inspect what is going on inside the pod.</p>
+<p>We do this with the <code class="docutils literal notranslate"><span class="pre">kubectl</span> <span class="pre">exec</span> <span class="pre">-it</span> <span class="pre">&lt;pod&gt;</span> <span class="pre">bash</span></code> command. The command opens an interactive shell to the pod that we can use to analyse the running pod with.
+On Windows, we may have to route the call via winpty helper to correctly route the interactive shell.</p>
+<div class="highlight-kotlin notranslate"><div class="highlight"><pre><span></span><span class="n">winpty</span> <span class="n">kubectl</span> <span class="n">exec</span> <span class="p">-</span><span class="n">it</span> <span class="n">corda</span><span class="p">-</span><span class="n">node</span><span class="p">-</span><span class="m">3</span><span class="p">-</span><span class="n">deployment</span><span class="p">-</span><span class="m">5f7</span><span class="n">cbf95bd</span><span class="p">-</span><span class="n">bznpv</span> <span class="n">bash</span>
+</pre></div>
+</div>
+<p>This should give us a bash command prompt to the running pod.
+The default working folders for Corda Node and Corda Firewall is <code class="docutils literal notranslate"><span class="pre">/opt/corda</span></code>.
+We should perform normal Corda component investigation / trouble shooting from this point on.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="testing">
+<h3>Testing</h3>
+<div class="section" id="connectivity">
+<h4>Connectivity</h4>
+<p>Now that we have the components up and running and have been able to verify that they connect to each other (at least according to the logs) we should run some further tests.
+One such operation is verifying if our components can see the other components.
+We can use ping / telnet to check if we can reach the other pods / ports.
+There is a simple <code class="docutils literal notranslate"><span class="pre">ping.sh</span></code> script installed on the Corda Node in the workspace folder.
+This script executes a simple check to see if a port is open:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span><span class="nb">echo</span> &gt; /dev/tcp/<span class="nv">$IP</span>/<span class="nv">$PORT</span><span class="o">)</span> &gt; /dev/null <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">&quot;UP&quot;</span> <span class="o">||</span> <span class="nb">echo</span> <span class="s2">&quot;DOWN&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>For testing Kubernetes services, you should enter the service name instead of an IP address, for example:</p>
+<div class="highlight-kotlin notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">echo</span> <span class="p">&gt;</span> <span class="p">/</span><span class="n">dev</span><span class="p">/</span><span class="n">tcp</span><span class="p">/</span><span class="n">corda</span><span class="p">-</span><span class="n">node</span><span class="p">-</span><span class="m">3</span><span class="p">-</span><span class="n">float</span><span class="p">-</span><span class="n">service</span><span class="p">/</span><span class="m">40000</span><span class="p">)</span> <span class="p">&gt;</span> <span class="p">/</span><span class="n">dev</span><span class="p">/</span><span class="k">null</span> <span class="m">2</span><span class="p">&gt;&amp;</span><span class="m">1</span> <span class="p">&amp;&amp;</span> <span class="n">echo</span> <span class="s">&quot;UP&quot;</span> <span class="p">||</span> <span class="n">echo</span> <span class="s">&quot;DOWN&quot;</span><span class="p">;</span>
+<span class="n">UP</span>
+</pre></div>
+</div>
+<p>This indicates that the Corda Node can see and access the expected port on the Float service.
+Should the command not return, it means that the port is open, but no process is responding on that port, which will eventually timeout and report DOWN.
+This indicates you have an issue on the component in question.</p>
+</div>
+<div class="section" id="testing-flows">
+<h4>Testing flows</h4>
+<p>Once we have been able to verify that the deployment is connecting to the other components in the deployment correctly we can go ahead and see if we can communicate with the rest of the Corda Network we are connecting to.
+The Helm chart has an option to enable sshd access to the Node, which will expose the port, and if you connect to that port with the RPC user with an ssh shell, you will get to the Corda Node shell.
+In this shell, you can execute flows, just as if you were running an RPC client.
+This makes it very easy to test if the Node sees the rest of the network and ultimately, if it can transact with other nodes on the network.
+If we don’t want to expose the ssh port to the rest of the network, we can also just expose it for the pod and connect to it with the following useful command:</p>
+<div class="highlight-kotlin notranslate"><div class="highlight"><pre><span></span><span class="n">kubectl</span> <span class="n">port</span><span class="p">-</span><span class="n">forward</span> <span class="n">corda</span><span class="p">-</span><span class="n">node</span><span class="p">-</span><span class="m">3</span><span class="p">-</span><span class="n">deployment</span><span class="p">-</span><span class="m">5f7</span><span class="n">cbf95bd</span><span class="p">-</span><span class="n">bznpv</span> <span class="m">30000</span><span class="p">:</span><span class="m">30000</span>
+<span class="n">Forwarding</span> <span class="n">from</span> <span class="m">127.0</span><span class="p">.</span><span class="m">0.1</span><span class="p">:</span><span class="m">30000</span> <span class="p">-&gt;</span> <span class="m">30000</span>
+<span class="n">Forwarding</span> <span class="n">from</span> <span class="p">[</span><span class="o">::</span><span class="m">1</span><span class="p">]:</span><span class="m">30000</span> <span class="p">-&gt;</span> <span class="m">30000</span>
+</pre></div>
+</div>
+<p>This allows us to connect from our local machine to the local IP address (of 127.0.0.1) and actually end up inside our Kubernetes cluster for the pod/port listed.
+This is very useful indeed!</p>
+<p>Let’s start with testing if we can see the rest of the network. This is done by issuing a command to list the network map snapshot.</p>
+<div class="highlight-kotlin notranslate"><div class="highlight"><pre><span></span><span class="n">run</span> <span class="n">networkMapSnapshot</span>
+<span class="n">addresses</span><span class="p">:</span> <span class="s">&quot;IP:60000&quot;</span>
+<span class="n">legalIdentitiesAndCerts</span><span class="p">:</span> <span class="s">&quot;O=PartyA1, L=London, C=GB&quot;</span>
+<span class="n">platformVersion</span><span class="p">:</span> <span class="m">4</span>
+<span class="n">serial</span><span class="p">:</span> <span class="m">1570012229643</span>
+</pre></div>
+</div>
+<p>If we can see the other nodes on the network, it means we have connectivity to the Network Map server on the Corda Network.</p>
+<p>Next we should check if we can perform a flow with another Node on the network. Preferrably a Node we know will respond to our request.
+If for example we are running the Corda Finance flows, we should have two nodes running, where one will be the responder to the other nodes requests.
+Corda Finance package has the capability to issue new Cash and transfer that Cash to another Node.</p>
+<div class="highlight-kotlin notranslate"><div class="highlight"><pre><span></span><span class="n">flow</span> <span class="n">start</span> <span class="n">net</span><span class="p">.</span><span class="n">corda</span><span class="p">.</span><span class="n">finance</span><span class="p">.</span><span class="n">flows</span><span class="p">.</span><span class="n">CashIssueAndPaymentFlow</span>
+</pre></div>
+</div>
+<p>If after executing this flow successfully between two nodes, we are now live on the Corda Network with our Node which is running within a Kubernetes cluster!</p>
+<p>Time to crack open a bottle of champagne!</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="prerequisites.html" class="btn btn-neutral float-left" title="Corda Kubernetes Deployment Prerequisites" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../faq.html" class="btn btn-neutral float-right" title="Frequently asked questions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018, R3 Limited.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
